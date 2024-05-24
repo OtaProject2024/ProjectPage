@@ -8,7 +8,7 @@
           <h1 class="font-bold text-8xl md:text-9xl">Ota <br />Project 2024</h1>
         </div>
         <div class="animate-title-in mt-10">
-          <p class="font-light text-2xl md:text-3xl">The next frontier of fishing.</p>
+          <p class="font-light text-2xl md:text-3xl">Indoor Fishing - Realistic experience with fish robot.</p>
         </div>
       </div>
     </div>

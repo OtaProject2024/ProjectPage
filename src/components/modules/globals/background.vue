@@ -9,14 +9,13 @@ const scene = new THREE.Scene();
 // stl model
 const stlLoader = new STLLoader();
 const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-
-const models = ["./assets/model/fish.stl", "./assets/model/fugu.stl", "./assets/model/robo.stl"];
-stlLoader.load(models[Math.floor(Math.random() * 3)], (geometry) => {
-   const material = new THREE.MeshStandardMaterial({ color: randomColor, roughness: 0 });
-   var mesh = new THREE.Mesh(geometry, material);
+stlLoader.load("./assets/model/murdock.stl", (geometry) => {
+  const material = new THREE.MeshStandardMaterial({ color: randomColor, roughness: 0 });
+  var mesh = new THREE.Mesh(geometry, material);
   mesh.geometry.center();
-  mesh.scale.set(0.04, 0.04, 0.04);
+  mesh.scale.set(0.0015, 0.0015, 0.0015);
   mesh.rotation.x = -Math.PI / 2;
+  mesh.rotation.z = -Math.PI / 2;
   scene.add(mesh);
 });
 
@@ -38,10 +37,12 @@ for (var h = 1; h < 1500; h++) {
 }
 
 // light
-const light = new THREE.AmbientLight(0x404040);
+const ambientLight = new THREE.AmbientLight(0x404040);
+const hemisphereLight = new THREE.HemisphereLight(0x404040);
 const directLight = new THREE.DirectionalLight(0xffffff, 5);
 directLight.position.set(5, 0, 2);
-scene.add(light);
+scene.add(ambientLight);
+scene.add(hemisphereLight);
 scene.add(directLight);
 
 // camera, renderer
@@ -62,7 +63,6 @@ function animate() {
   requestAnimationFrame(animate);
 
   // particles
-
   particulars.forEach((particular) => {
     if (particular.position.x > 7) {
       particular.position.x = -7;
@@ -73,6 +73,7 @@ function animate() {
     particular.position.x += 0.01;
     particular.position.y += 0.01;
   });
+
   // camera
   camera.rotation.x += 0.00001;
   camera.rotation.z -= 0.001;
@@ -94,7 +95,7 @@ function animate() {
     }
   } else {
     camera.position.z -= 0.001;
-    if (camera.position.z < 1) {
+    if (camera.position.z < 2) {
       flgP = true;
     }
   }

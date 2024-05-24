@@ -2,20 +2,17 @@
 import left from "../modules/active/left.vue";
 import right from "../modules/active/right.vue";
 
-const jan = ["coming soon...coming soon...coming soon...", "coming soon...", "coming soon...", "coming soon..."];
-const jan_imgs = ["./assets/general/logo.png", "./assets/general/logo.png", "./assets/general/logo.png"];
-const feb = ["coming soon...", "coming soon...", "coming soon..."];
-const feb_imgs = ["./assets/general/logo.png", "./assets/general/logo.png", "./assets/general/logo.png"];
-const mar = ["coming soon...", "coming soon...", "coming soon..."];
-const apr = ["coming soon...", "coming soon...", "coming soon..."];
-const may = ["coming soon...", "coming soon...", "coming soon..."];
-const jun = ["coming soon...", "coming soon...", "coming soon..."];
-const jul = ["coming soon...", "coming soon...", "coming soon..."];
-const aug = ["coming soon...", "coming soon...", "coming soon..."];
-const sep = ["coming soon...", "coming soon...", "coming soon..."];
-const oct = ["coming soon...", "coming soon...", "coming soon..."];
-const nov = ["coming soon...", "coming soon...", "coming soon..."];
-const dec = ["coming soon...", "coming soon...", "coming soon..."];
+const mar = ["顔合わせ", "釣りの体験会"];
+const mar_imgs = ["./assets/img/mar2024_001.jpg", "./assets/img/mar2024_002.jpg"];
+const apr = ["ルール決定", "テーマ決定", "役割分担", "制作物の概要決定"];
+const may = ["設計開始", "CADデータ作成", "アンケート実施", "3Dプリント"];
+const jun = ["データ修正", "ロボット組み立て", "テスト実施"];
+const jul = ["プロトタイプ完成", "中間発表", "プロトタイプ改良"];
+const aug = ["coming soon..."];
+const sep = ["coming soon..."];
+const oct = ["coming soon..."];
+const nov = ["coming soon..."];
+const dec = ["coming soon..."];
 </script>
 
 <template>
@@ -26,18 +23,16 @@ const dec = ["coming soon...", "coming soon...", "coming soon..."];
       </div>
       <div class="place-self-center mt-10">
         <div class="p-2 mx-auto flex flex-col md:grid grid-cols-9">
-          <left month="January" :contents="jan" :imgs="jan_imgs" />
-          <right month="February" :contents="feb" :imgs="feb_imgs" />
-          <left month="March" :contents="mar" />
-          <right month="April" :contents="apr" />
-          <left month="May" :contents="may" />
-          <right month="June" :contents="jun" />
-          <left month="July" :contents="jul" />
-          <right month="August" :contents="aug" />
-          <left month="September" :contents="sep" />
-          <right month="October" :contents="oct" />
+          <left month="March 2024" :contents="mar" :imgs="mar_imgs" />
+          <right month="April 2024" :contents="apr" />
+          <left month="May 2024" :contents="may" />
+          <right month="June 2024" :contents="jun" />
+          <left month="July 2024" :contents="jul" />
+          <right month="August 2024" :contents="aug" />
+          <left month="September 2024" :contents="sep" />
+          <right month="October 2024" :contents="oct" />
           <left month="November" :contents="nov" />
-          <right month="December" :contents="dec" />
+          <right month="December 2024" :contents="dec" />
           <div class="flex md:contents">
             <div class="animate-line-in relative col-start-5 col-end-6 mr-10 md:mx-auto">
               <div class="h-60 w-6 flex items-center justify-center">

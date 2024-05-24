@@ -9,16 +9,16 @@ import profile from "../modules/member/profile.vue";
         <h1 class="font-bold text-center text-6xl md:text-7xl">member</h1>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        <profile number="ne22-0000" name="はぎ" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="かけ" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="ピンキー" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="ふく" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="いけしん" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="りょ" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="まひ" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="ぷぅさん" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="ne22-0000" name="시준" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
-        <profile number="-" name="タカ先生" course="Pコース NNプログラム" path="./assets/icon/icon_def.png" />
+        <profile name="はぎ" course="PC program" role="3D Modeling, Programming" path="./assets/icon/icon_def.png" />
+        <profile name="かけ" course="PC program" role="3D Modeling" path="./assets/icon/icon_def.png" />
+        <profile name="ピンキー" course="IB program" role="Project management, Design" path="./assets/icon/icon_def.png" />
+        <profile name="ふく" course="DS program" role="3D Modeling" path="./assets/icon/icon_def.png" />
+        <profile name="いけしん" course="PC program" role="Leader, 3D Modeling" path="./assets/icon/icon_def.png" />
+        <profile name="りょ" course="NS program" role="Sub leader, Programming" path="./assets/icon/icon_def.png" />
+        <profile name="まひ" course="PC program" role="3D Modeling" path="./assets/icon/icon_def.png" />
+        <profile name="ぷぅさん" course="PC program" role="3D Modeling, Programming" path="./assets/icon/icon_def.png" />
+        <profile name="시준" course="NS program" role="Public relations, Programming" path="./assets/icon/icon_def.png" />
+        <profile name="太田 隆博" course="teacher" path="./assets/icon/icon_def.png" />
       </div>
     </div>
   </div>

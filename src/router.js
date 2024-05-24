@@ -44,7 +44,7 @@ const router = new createRouter({
   routes,
 });
 
-const DEFAULT_TITLE = "PPP project2024";
+const DEFAULT_TITLE = "OtaProject2024";
 router.afterEach((to, from) => {
   document.title = to.meta.title || DEFAULT_TITLE;
 });

@@ -23,14 +23,9 @@ const leave = () => {
       <ul class="list-disc list-inside pl-2 mt-3">
         <li v-for="content in contents">{{ content }}</li>
       </ul>
-      <transition
-        enter-from-class="opacity-0"
-        enter-active-class="duration-200"
-        leave-to-class="opacity-0"
-        leave-active-class="duration-200"
-      >
+      <transition enter-from-class="opacity-0" enter-active-class="duration-200" leave-to-class="opacity-0" leave-active-class="duration-200">
         <ul class="list-none list-inside grid justify-items-center pl-2 mt-3" v-show="flg">
-          <li v-for="img in imgs"><img class="w-72" :src="img" alt="img" /></li>
+          <li v-for="img in imgs"><img class="rounded-lg w-72 mb-2" :src="img" alt="img" /></li>
         </ul>
       </transition>
     </div>
