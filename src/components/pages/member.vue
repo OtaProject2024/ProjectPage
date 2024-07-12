@@ -9,16 +9,16 @@ import profile from "../modules/member/profile.vue";
         <h1 class="font-bold text-center text-6xl md:text-7xl">member</h1>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        <profile name="はぎ" course="PC program" role="3D Modeling, Programming" path="./assets/icon/icon_def.png" />
-        <profile name="かけ" course="PC program" role="3D Modeling" path="./assets/icon/icon_def.png" />
-        <profile name="ピンキー" course="IB program" role="Project management, Design" path="./assets/icon/icon_def.png" />
-        <profile name="ふく" course="DS program" role="3D Modeling" path="./assets/icon/icon_def.png" />
-        <profile name="いけしん" course="PC program" role="Leader, 3D Modeling" path="./assets/icon/icon_def.png" />
-        <profile name="りょ" course="NS program" role="Sub leader, Programming" path="./assets/icon/icon_def.png" />
-        <profile name="まひ" course="PC program" role="3D Modeling" path="./assets/icon/icon_def.png" />
-        <profile name="ぷぅさん" course="PC program" role="3D Modeling, Programming" path="./assets/icon/icon_def.png" />
-        <profile name="시준" course="NS program" role="Public relations, Programming" path="./assets/icon/icon_def.png" />
-        <profile name="太田 隆博" course="teacher" path="./assets/icon/icon_def.png" />
+        <profile name="はぎ" course="PC program" role="3Dモデリング, プログラミング" path="assets/icon/hagi.jpg" />
+        <profile name="かけ" course="PC program" role="3Dモデリング" path="assets/icon/kake.jpg" />
+        <profile name="ピンキー" course="IB program" role="マネージメント, デザイン" path="assets/icon/pin.jpg" />
+        <profile name="ふく" course="DS program" role="3Dモデリング" path="assets/icon/huku.jpg" />
+        <profile name="いけしん" course="PC program" role="リーダー, 3Dモデリング" path="assets/icon/ike.jpg" />
+        <profile name="りょ" course="NS program" role="サブリーダー, プログラミング" path="assets/icon/ry.jpg" />
+        <profile name="まひ" course="PC program" role="3Dモデリング" path="assets/icon/mahi.jpg" />
+        <profile name="ぷぅさん" course="PC program" role="プログラミング" path="assets/icon/kuma.jpg" />
+        <profile name="시준" course="NS program" role="広報, 3Dモデリング" path="assets/icon/ki.jpg" />
+        <profile name="太田 隆博" course="担当教員" path="assets/icon/ota.jpg" />
       </div>
     </div>
   </div>
