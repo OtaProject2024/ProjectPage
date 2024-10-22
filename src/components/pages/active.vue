@@ -21,7 +21,6 @@ const oct_imgs = ["assets/img/oct2024_001.jpg", "assets/img/oct2024_002.jpg"];
 const nov = ["鳳祭出店", "反省会", "最終発表準備"];
 const nov_imgs = ["assets/img/nov2024_001.jpg", "assets/img/nov2024_002.jpg"];
 const dec = ["最終発表会", "成果報告書作成"];
-const dec_imgs = ["assets/img/dec2024_001.jpg", "assets/img/dec2024_002.jpg"];
 </script>
 
 <template>
@@ -41,7 +40,7 @@ const dec_imgs = ["assets/img/dec2024_001.jpg", "assets/img/dec2024_002.jpg"];
           <left month="September 2024" :contents="sep" :imgs="sep_imgs" />
           <right month="October 2024" :contents="oct" :imgs="oct_imgs" />
           <left month="November 2024" :contents="nov" :imgs="nov_imgs" />
-          <right month="December 2024" :contents="dec" :imgs="dec_imgs" />
+          <right month="December 2024" :contents="dec" />
           <div class="flex md:contents">
             <div class="animate-line-in relative col-start-5 col-end-6 mr-10 md:mx-auto">
               <div class="h-60 w-6 flex items-center justify-center">

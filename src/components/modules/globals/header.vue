@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <header class="absolute w-screen z-20 p-3 bg-zinc-900 bg-opacity-80">
@@ -36,10 +37,21 @@
           </li>
           <li class="animate-nav-in5 pr-3 md:pr-5">
             <a
-              href="https://sites.google.com/senshu-u.jp/24otaproject"
+              href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide"
               target="_blank"
               rel="noreferrer"
               class="group transition"
+            >
+              fishing guide
+              <span class="mov-li"></span>
+            </a>
+          </li>
+          <li class="animate-nav-in5 pr-3 md:pr-5">
+            <a
+                href="https://sites.google.com/senshu-u.jp/24otaproject"
+                target="_blank"
+                rel="noreferrer"
+                class="group transition"
             >
               journal
               <span class="mov-li"></span>
