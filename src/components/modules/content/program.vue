@@ -7,7 +7,7 @@ const img = ref("./assets/general/logo.png");
 </script>
 
 <template>
-  <div class="animate-part-in flex flex-col p-3 mt-2 mb-12">
+  <div class="animate-part-in w-11/12 flex flex-col p-3 mt-2 mb-12">
     <p>
       開発プロセスを効率化するためにGitHubを活用し、ソースコードの開発を行いました。
       GitHubを使用することで、バージョン管理や問題追跡などが容易に行えます。
