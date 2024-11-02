@@ -24,34 +24,34 @@ const toggle = () => {
         <ul class="flex flex-row font-light text-base">
           <li class="animate-nav-in1 w-min whitespace-nowrap pr-5">
             <router-link to="/about" class="group transition">
-              about <span class="mov-li"></span>
+              About <span class="mov-li"></span>
             </router-link>
           </li>
           <li class="animate-nav-in2 w-min whitespace-nowrap pr-5">
-            <router-link to="/member" class="group transition">
-              member<span class="mov-li"></span>
+            <router-link to="/members" class="group transition">
+              Members<span class="mov-li"></span>
             </router-link>
           </li>
           <li class="animate-nav-in3 w-min whitespace-nowrap pr-5">
-            <router-link to="/active" class="group transition">
-              active<span class="mov-li"></span>
+            <router-link to="/activities" class="group transition">
+              Activities<span class="mov-li"></span>
             </router-link>
           </li>
           <li class="animate-nav-in4 w-min whitespace-nowrap pr-5">
-            <router-link to="/content" class="group transition">
-              content<span class="mov-li"></span>
+            <router-link to="/contents" class="group transition">
+              Contents<span class="mov-li"></span>
             </router-link>
           </li>
           <li class="animate-nav-in5 w-min whitespace-nowrap pr-5">
             <a href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide" target="_blank" rel="noreferrer"
                class="group transition">
-              fishing guide<span class="mov-li"></span>
+              Fishing Guide<span class="mov-li"></span>
             </a>
           </li>
           <li class="animate-nav-in6 w-min whitespace-nowrap pr-5">
             <a href="https://sites.google.com/senshu-u.jp/24otaproject" target="_blank" rel="noreferrer"
                class="group transition">
-              journal<span class="mov-li"></span>
+              Journal<span class="mov-li"></span>
             </a>
           </li>
           <li class="animate-nav-in7 w-min whitespace-nowrap">
@@ -89,34 +89,34 @@ const toggle = () => {
           <ul class="flex flex-col font-light text-base space-y-4">
             <li class="animate-nav-in1 w-min whitespace-nowrap">
               <router-link to="/about" class="group transition" @click="toggle">
-                about<span class="mov-li"></span>
+                About<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in2 w-min whitespace-nowrap">
               <router-link to="/member" class="group transition" @click="toggle">
-                member<span class="mov-li"></span>
+                Members<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in3 w-min whitespace-nowrap">
               <router-link to="/active" class="group transition" @click="toggle">
-                active<span class="mov-li"></span>
+                Activities<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in4 w-min whitespace-nowrap">
               <router-link to="/content" class="group transition" @click="toggle">
-                content<span class="mov-li"></span>
+                Contents<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in5 w-min whitespace-nowrap">
               <a href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide" target="_blank" rel="noreferrer"
                  class="group transition" @click="toggle">
-                fishing guide<span class="mov-li"></span>
+                Fishing Guide<span class="mov-li"></span>
               </a>
             </li>
             <li class="animate-nav-in6 w-min whitespace-nowrap">
               <a href="https://sites.google.com/senshu-u.jp/24otaproject" target="_blank" rel="noreferrer"
                  class="group transition" @click="toggle">
-                journal<span class="mov-li"></span>
+                Journal<span class="mov-li"></span>
               </a>
             </li>
             <li class="animate-nav-in7 w-min whitespace-nowrap">

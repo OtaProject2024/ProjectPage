@@ -69,7 +69,7 @@ const copy = () => {
           </ul>
           <p v-show="flg" class="animate-footer-in mt-4">
             © 2024
-            <a href="https://github.com/OtaProject2024" target="_blank" rel="noreferrer">OtaProject2024.&nbsp;</a>
+            <a href="https://github.com/OtaProject2024/OtaProject2024_projectpage" target="_blank" rel="noreferrer">OtaProject2024.&nbsp;</a>
             All Rights Reserved.
           </p>
         </div>

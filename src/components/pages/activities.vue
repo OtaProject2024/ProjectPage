@@ -1,6 +1,6 @@
 <script setup>
-import left from "../modules/active/left.vue";
-import right from "../modules/active/right.vue";
+import left from "../modules/activities/left.vue";
+import right from "../modules/activities/right.vue";
 
 const mar = ["顔合わせ", "釣りの体験会"];
 const mar_images = ["assets/img/mar2024_001.jpg", "assets/img/mar2024_002.jpg"];
@@ -28,19 +28,19 @@ const dec = ["最終発表会", "成果報告書作成"];
       class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
     <div class="mt-32 flex flex-col font-Poppins text-white">
       <div class="animate-session-in">
-        <h1 class="font-bold text-center text-6xl md:text-7xl">active</h1>
+        <h1 class="font-bold text-center text-6xl md:text-7xl">Activities</h1>
       </div>
       <div class="place-self-center mt-10">
         <div class="p-2 mx-auto flex flex-col md:grid grid-cols-9">
-          <left month="March 2024" :contents="mar" :imgs="mar_images"/>
-          <right month="April 2024" :contents="apr" :imgs="apr_images"/>
-          <left month="May 2024" :contents="may" :imgs="may_images"/>
-          <right month="June 2024" :contents="jun" :imgs="jun_images"/>
-          <left month="July 2024" :contents="jul" :imgs="jul_images"/>
-          <right month="August 2024" :contents="aug" :imgs="aug_images"/>
-          <left month="September 2024" :contents="sep" :imgs="sep_images"/>
-          <right month="October 2024" :contents="oct" :imgs="oct_images"/>
-          <left month="November 2024" :contents="nov" :imgs="nov_images"/>
+          <left month="March 2024" :contents="mar" :images="mar_images"/>
+          <right month="April 2024" :contents="apr" :images="apr_images"/>
+          <left month="May 2024" :contents="may" :images="may_images"/>
+          <right month="June 2024" :contents="jun" :images="jun_images"/>
+          <left month="July 2024" :contents="jul" :images="jul_images"/>
+          <right month="August 2024" :contents="aug" :images="aug_images"/>
+          <left month="September 2024" :contents="sep" :images="sep_images"/>
+          <right month="October 2024" :contents="oct" :images="oct_images"/>
+          <left month="November 2024" :contents="nov" :images="nov_images"/>
           <right month="December 2024" :contents="dec"/>
           <div class="flex md:contents">
             <div class="animate-line-in relative col-start-5 col-end-6 mr-10 md:mx-auto">

@@ -13,18 +13,18 @@ const routes = [
     meta: { title: BASE_TITLE + "about" },
   },
   {
-    path: "/member",
-    component: () => import("./components/pages/member.vue"),
-    meta: { title: BASE_TITLE + "member" },
+    path: "/members",
+    component: () => import("./components/pages/members.vue"),
+    meta: { title: BASE_TITLE + "members" },
   },
   {
-    path: "/active",
-    component: () => import("./components/pages/active.vue"),
+    path: "/activities",
+    component: () => import("./components/pages/activities.vue"),
     meta: { title: BASE_TITLE + "active" },
   },
   {
-    path: "/content",
-    component: () => import("./components/pages/content.vue"),
+    path: "/contents",
+    component: () => import("./components/pages/contents.vue"),
     meta: { title: BASE_TITLE + "content" },
   },
   {
