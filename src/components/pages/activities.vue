@@ -3,23 +3,23 @@ import left from "../modules/activities/left.vue";
 import right from "../modules/activities/right.vue";
 
 const mar = ["顔合わせ", "釣りの体験会"];
-const mar_images = ["assets/img/mar2024_001.jpg", "assets/img/mar2024_002.jpg"];
+const mar_images = ["assets/images/mar2024_001.jpg", "assets/images/mar2024_002.jpg"];
 const apr = ["ルール決定", "テーマ決定", "役割分担", "制作物の概要決定"];
-const apr_images = ["assets/img/apr2024_001.jpg", "assets/img/apr2024_002.jpg"];
+const apr_images = ["assets/images/apr2024_001.jpg", "assets/images/apr2024_002.jpg"];
 const may = ["設計開始", "CADデータ作成", "アンケート実施", "3Dプリント"];
-const may_images = ["assets/img/may2024_001.jpg", "assets/img/may2024_002.jpg"];
+const may_images = ["assets/images/may2024_001.jpg", "assets/images/may2024_002.jpg"];
 const jun = ["データ修正", "ロボット組み立て", "テスト実施"];
-const jun_images = ["assets/img/jun2024_001.jpg", "assets/img/jun2024_002.jpg"];
+const jun_images = ["assets/images/jun2024_001.jpg", "assets/images/jun2024_002.jpg"];
 const jul = ["プロトタイプ完成", "中間発表", "プロトタイプ改良"];
-const jul_images = ["assets/img/jul2024_001.jpg", "assets/img/jul2024_002.jpg"];
+const jul_images = ["assets/images/jul2024_001.jpg", "assets/images/jul2024_002.jpg"];
 const aug = ["修正版プロトタイプ制作", "WEBページ制作", "リーフレット制作"];
-const aug_images = ["assets/img/aug2024_001.jpg", "assets/img/aug2024_002.jpg"];
+const aug_images = ["assets/images/aug2024_001.jpg", "assets/images/aug2024_002.jpg"];
 const sep = ["修正版プロトタイプ完成", "WEBページ完成", "リーフレット完成", "鳳祭出店準備"];
-const sep_images = ["assets/img/sep2024_001.jpg", "assets/img/sep2024_002.jpg"];
+const sep_images = ["assets/images/sep2024_001.jpg", "assets/images/sep2024_002.jpg"];
 const oct = ["空間デザイン", "映像制作", "鳳祭出店準備"];
-const oct_images = ["assets/img/oct2024_001.jpg", "assets/img/oct2024_002.jpg"];
+const oct_images = ["assets/images/oct2024_001.jpg", "assets/images/oct2024_002.jpg"];
 const nov = ["鳳祭出店", "反省会", "最終発表準備"];
-const nov_images = ["assets/img/nov2024_001.jpg", "assets/img/nov2024_002.jpg"];
+const nov_images = ["assets/images/nov2024_001.jpg", "assets/images/nov2024_002.jpg"];
 const dec = ["最終発表会", "成果報告書作成"];
 </script>
 
