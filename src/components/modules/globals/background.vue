@@ -1,16 +1,20 @@
 <script setup>
-import { onMounted } from "vue";
+import {onMounted} from "vue";
 import * as THREE from "three";
-import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
+import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
 
 // scene
 const scene = new THREE.Scene();
 
 // stl model
 const stlLoader = new STLLoader();
-const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+let randomColor = "#";
+for(let i = 0; i < 6; i++) {
+  randomColor += (16*Math.random() | 0).toString(16);
+}
 stlLoader.load("./assets/model/murdock.stl", (geometry) => {
-  const material = new THREE.MeshStandardMaterial({ color: randomColor, roughness: 0 });
+  const material = new THREE.MeshStandardMaterial({color: randomColor, roughness: 0});
   var mesh = new THREE.Mesh(geometry, material);
   mesh.geometry.center();
   mesh.scale.set(0.0015, 0.0015, 0.0015);
@@ -27,6 +31,7 @@ function mathRandom(num = 7) {
   var numValue = -Math.random() * num + Math.random() * num;
   return numValue;
 }
+
 var particulars = [];
 for (var h = 1; h < 1500; h++) {
   var particular = new THREE.Mesh(gParticular, gMaterial);
@@ -59,6 +64,7 @@ onMounted(() => {
 let flgP = true;
 let flgR = true;
 animate();
+
 function animate() {
   requestAnimationFrame(animate);
 
@@ -106,6 +112,7 @@ function animate() {
 // resize
 window.addEventListener("resize", onResize);
 onResize();
+
 function onResize() {
   const width = window.innerWidth;
   const height = window.innerHeight;

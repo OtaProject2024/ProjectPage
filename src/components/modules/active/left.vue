@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import {ref} from "vue";
 
 const type = defineProps({
   month: String,
@@ -8,24 +8,27 @@ const type = defineProps({
 });
 
 let flg = ref(false);
-const over = () => {
-  flg.value = true;
-};
-const leave = () => {
-  flg.value = false;
+const click = () => {
+  flg.value = !flg.value;
 };
 </script>
 
 <template>
-  <div class="flex flex-row-reverse md:contents" @mouseover="over" @mouseleave="leave">
-    <div class="animate-month-left-in hov-hl rounded-lg col-start-1 col-end-5 p-4 my-4 mr-auto md:mr-0 md:ml-auto">
-      <h2 class="text-4xl md:text-5xl">{{ month }}</h2>
-      <ul class="list-disc list-inside pl-2 mt-3">
+  <div class="flex flex-row-reverse md:contents" @click="click">
+    <div class="animate-month-left-in col-start-1 col-end-5 p-4 my-4 mr-auto md:mr-0 md:ml-auto">
+      <h2 class="text-4xl md:text-5xl">
+        <span class="inline-block duration-500" :class="{'rotate-90 duration-500': flg}">&gt;</span> {{ month }}
+      </h2>
+      <ul class="list-disc list-inside pl-10 md:pl-14 mt-3">
         <li v-for="content in contents">{{ content }}</li>
       </ul>
-      <transition enter-from-class="opacity-0" enter-active-class="duration-200" leave-to-class="opacity-0" leave-active-class="duration-200">
-        <ul class="list-none list-inside grid justify-items-center pl-2 mt-3" v-show="flg">
-          <li v-for="img in imgs"><img class="rounded-lg w-72 mb-2" :src="img" alt="img" /></li>
+      <transition
+          enter-from-class="opacity-0"
+          enter-active-class="duration-300"
+          leave-to-class="opacity-0"
+          leave-active-class="duration-300">
+        <ul class="list-none list-inside grid justify-items-center pl-2 mt-7" v-show="flg">
+          <li v-for="img in imgs"><img class="rounded-lg w-72 mb-2" :src="img" alt="img"/></li>
         </ul>
       </transition>
     </div>
