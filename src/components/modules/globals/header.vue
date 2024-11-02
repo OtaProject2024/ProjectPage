@@ -93,17 +93,17 @@ const toggle = () => {
               </router-link>
             </li>
             <li class="animate-nav-in2 w-min whitespace-nowrap">
-              <router-link to="/member" class="group transition" @click="toggle">
+              <router-link to="/members" class="group transition" @click="toggle">
                 Members<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in3 w-min whitespace-nowrap">
-              <router-link to="/active" class="group transition" @click="toggle">
+              <router-link to="/activities" class="group transition" @click="toggle">
                 Activities<span class="mov-li"></span>
               </router-link>
             </li>
             <li class="animate-nav-in4 w-min whitespace-nowrap">
-              <router-link to="/content" class="group transition" @click="toggle">
+              <router-link to="/contents" class="group transition" @click="toggle">
                 Contents<span class="mov-li"></span>
               </router-link>
             </li>
