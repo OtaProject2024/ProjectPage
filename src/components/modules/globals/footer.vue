@@ -17,7 +17,7 @@ const toggle = () => {
 
 let flg_copy = ref(false);
 const base_url = location.href;
-const x_url = ref("https://x.com/share?url=" + base_url + "&text=OtaProject2024");
+const x_url = ref("https://x.com/intent/post?text=OtaProject2024%0A&url=" + base_url);
 const facebook_url = ref("https://www.facebook.com/share.php?u=" + base_url);
 const copy = () => {
   try {

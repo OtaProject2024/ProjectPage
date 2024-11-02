@@ -32,16 +32,16 @@ const dec = ["最終発表会", "成果報告書作成"];
       </div>
       <div class="place-self-center mt-10">
         <div class="p-2 mx-auto flex flex-col md:grid grid-cols-9">
-          <left month="March 2024" :contents="mar" :images="mar_images"/>
-          <right month="April 2024" :contents="apr" :images="apr_images"/>
-          <left month="May 2024" :contents="may" :images="may_images"/>
-          <right month="June 2024" :contents="jun" :images="jun_images"/>
-          <left month="July 2024" :contents="jul" :images="jul_images"/>
-          <right month="August 2024" :contents="aug" :images="aug_images"/>
-          <left month="September 2024" :contents="sep" :images="sep_images"/>
-          <right month="October 2024" :contents="oct" :images="oct_images"/>
-          <left month="November 2024" :contents="nov" :images="nov_images"/>
-          <right month="December 2024" :contents="dec"/>
+          <left month="March" :contents="mar" :images="mar_images"/>
+          <right month="April" :contents="apr" :images="apr_images"/>
+          <left month="May" :contents="may" :images="may_images"/>
+          <right month="June" :contents="jun" :images="jun_images"/>
+          <left month="July" :contents="jul" :images="jul_images"/>
+          <right month="August" :contents="aug" :images="aug_images"/>
+          <left month="September" :contents="sep" :images="sep_images"/>
+          <right month="October" :contents="oct" :images="oct_images"/>
+          <left month="November" :contents="nov" :images="nov_images"/>
+          <right month="December" :contents="dec"/>
           <div class="flex md:contents">
             <div class="animate-line-in relative col-start-5 col-end-6 mr-10 md:mx-auto">
               <div class="h-60 w-6 flex items-center justify-center">
