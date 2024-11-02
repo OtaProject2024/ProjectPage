@@ -9,7 +9,7 @@ const type = defineProps({
 
 <template>
   <div class="self-center my-5 w-min xl:w-full">
-    <div class="rounded-lg border border-white transition hover:duration-500 hover:bg-zinc-950 hover:bg-opacity-80">
+    <div class="rounded-lg border border-white transition duration-300 hover:brightness-75">
       <a :href="path" target="_blank" rel="noreferrer" class="flex items-center flex-col xl:flex-row">
         <img class="object-contain rounded-t-lg xl:rounded-b-lg xl:h-48" :src="img" alt="logo"/>
         <div class="flex flex-col justify-between p-4 leading-normal">

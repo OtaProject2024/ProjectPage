@@ -18,7 +18,7 @@ const toggle = () => {
 let flg_copy = ref(false);
 const base_url = location.href;
 const x_url = ref("https://x.com/share?url=" + base_url + "&text=OtaProject2024");
-const facebook_url = ref("http://www.facebook.com/share.php?u=" + base_url);
+const facebook_url = ref("https://www.facebook.com/share.php?u=" + base_url);
 const copy = () => {
   try {
     navigator.clipboard.writeText(base_url);
@@ -46,33 +46,36 @@ const copy = () => {
           <p id="notice" class="text-lg md:text-xl">Copy completed.</p>
         </div>
       </transition>
+
       <div class="self-end rounded-lg bg-zinc-900 bg-opacity-80 mb-7 p-5 mr-5 md:mr-10">
-        <div>
-          <ul class="flex items-center">
-            <li class="animate-footer-in cursor-pointer" @click="toggle">
-              <p class="text-lg md:text-xl"><span class="inline-block duration-500"
-                                                  :class="{'rotate-180 duration-500': flg}">&gt;</span> {{ text }}</p>
-            </li>
-            <li v-show="flg" class="animate-footer-in cursor-pointer ml-14 mr-7" @click="copy">
+        <div class="flex flex-row justify-start">
+          <p class="cursor-pointer text-lg md:text-xl" @click="toggle">
+              <span class="inline-block duration-500"
+                    :class="{'rotate-180 duration-500': flg}">
+                &gt;</span> {{ text }}
+          </p>
+
+          <ul v-show="flg" class="animate-footer-in flex justify-end ml-16">
+            <li class="cursor-pointer mr-7" @click="copy">
               <p class="text-lg md:text-xl">copy</p>
             </li>
-            <li v-show="flg" class="animate-footer-in cursor-pointer mr-7">
+            <li class="cursor-pointer mr-7">
               <a :href="x_url" target="_blank" rel="noreferrer">
                 <img class="h-7 w-7" src="/assets/sns/X_logo.png" alt="X"/>
               </a>
             </li>
-            <li v-show="flg" class="animate-footer-in cursor-pointer">
+            <li class="cursor-pointer">
               <a :href="facebook_url" target="_blank" rel="noreferrer">
                 <img class="h-7 w-7" src="/assets/sns/Facebook_logo.png" alt="Facebook"/>
               </a>
             </li>
           </ul>
-          <p v-show="flg" class="animate-footer-in mt-4">
-            © 2024
-            <a href="https://github.com/OtaProject2024/OtaProject2024_projectpage" target="_blank" rel="noreferrer">OtaProject2024.&nbsp;</a>
-            All Rights Reserved.
-          </p>
         </div>
+        <p v-show="flg" class="animate-footer-in mt-4">
+          © 2024
+          <a href="https://github.com/OtaProject2024/OtaProject2024_projectpage" target="_blank" rel="noreferrer">OtaProject2024.&nbsp;</a>
+          All Rights Reserved.
+        </p>
       </div>
     </div>
   </footer>
