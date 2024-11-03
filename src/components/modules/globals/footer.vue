@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import {event} from 'vue-gtag'
 
 let flg = ref(false);
 let text = ref("share");
@@ -22,6 +23,7 @@ const facebook_url = ref("https://www.facebook.com/share.php?u=" + base_url);
 const copy = () => {
   try {
     navigator.clipboard.writeText(base_url);
+    event("clicked share btn")
   } catch (e) {
     document.getElementById("notice").innerHTML = "Copy failed.<br/>your device not supported.";
   } finally {
@@ -31,6 +33,10 @@ const copy = () => {
     }, 5000);
   }
 };
+
+const sharePush = () => {
+  event("clicked share btn")
+}
 </script>
 
 <template>
@@ -60,12 +66,12 @@ const copy = () => {
               <p class="text-lg md:text-xl">copy</p>
             </li>
             <li class="cursor-pointer mr-7">
-              <a :href="x_url" target="_blank" rel="noreferrer">
+              <a :href="x_url" target="_blank" rel="noreferrer" @click="sharePush">
                 <img class="h-7 w-7" src="/assets/sns/X_logo.png" alt="X"/>
               </a>
             </li>
             <li class="cursor-pointer">
-              <a :href="facebook_url" target="_blank" rel="noreferrer">
+              <a :href="facebook_url" target="_blank" rel="noreferrer" @click="sharePush">
                 <img class="h-7 w-7" src="/assets/sns/Facebook_logo.png" alt="Facebook"/>
               </a>
             </li>
