@@ -2,7 +2,7 @@
 
 <template>
   <div class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
-    <div class="mt-72 font-Poppins text-white font-light text-center">
+    <div class="mt-72 font-base text-white font-light text-center">
       <div class="animate-session-in">
         <h1 class="text-3xl md:text-4xl">404 not found.</h1>
       </div>

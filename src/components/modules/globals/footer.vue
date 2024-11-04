@@ -41,7 +41,7 @@ const sharePush = () => {
 
 <template>
   <footer class="absolute right-0 z-20 bottom-24 sm:bottom-12 md:bottom-6 lg:bottom-3 xl:bottom-0">
-    <div class="flex flex-col font-Poppins font-light text-white">
+    <div class="flex flex-col font-Default font-light text-white">
       <transition
           enter-from-class="translate-x-full opacity-0"
           enter-active-class="transition duration-700"
@@ -63,7 +63,10 @@ const sharePush = () => {
 
           <ul v-show="flg" class="animate-footer-in flex justify-end ml-16">
             <li class="cursor-pointer mr-7" @click="copy">
-              <p class="text-lg md:text-xl">copy</p>
+              <div class="flex items-end">
+                <span class="material-icons text-lg md:text-xl">content_copy</span>
+                <a class="text-lg md:text-xl pl-1">copy</a>
+              </div>
             </li>
             <li class="cursor-pointer mr-7">
               <a :href="x_url" target="_blank" rel="noreferrer" @click="sharePush">

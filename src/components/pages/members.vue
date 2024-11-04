@@ -4,7 +4,7 @@ import profile from "../modules/members/profile.vue";
 
 <template>
   <div class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
-    <div class="mt-32 mb-60 mx-3 flex flex-col font-Poppins text-white">
+    <div class="mt-32 mb-60 mx-3 flex flex-col font-Default text-white">
       <div class="animate-session-in">
         <h1 class="font-bold text-center text-6xl md:text-7xl">Members</h1>
       </div>

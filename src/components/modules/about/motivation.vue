@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="animate-part-in w-11/12 p-3 mt-2 mb-6">
+  <div class="animate-part-in text-gray-200 w-11/12 p-3 mt-2 mb-6">
     <p>我々は現実問題や独自のアンケートより、釣りに関する問題点をいくつか見つけました。</p>
-    <ul class="list-disc list-inside leading-relaxed font-bold text-l ml-1 py-3">
+    <ul class="list-disc list-inside leading-relaxed font-semibold text-white text-l ml-1 py-3">
       <li>釣りの楽しさが分からない</li>
       <li>釣りに対するハードルを高く感じている</li>
       <li>釣りをする機会が無い</li>

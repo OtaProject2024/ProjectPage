@@ -5,19 +5,21 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
+                Default: ["Poppins", "Noto Sans JP"],
                 Poppins: ["Poppins"],
+                NotoSans: ["Noto Sans JP"],
             },
             animation: {
                 "title-in": "text-focus 1s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",
                 "bg-in": "text-focus 0.3s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",
                 "nav-title-in": "slide-in-left 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) both",
-                "nav-in1": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) both",
-                "nav-in2": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.1s both",
-                "nav-in3": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.2s both",
-                "nav-in4": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.3s both",
-                "nav-in5": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.4s both",
-                "nav-in6": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.5s both",
-                "nav-in7": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.6s both",
+                "nav-in1": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.2s both",
+                "nav-in2": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.3s both",
+                "nav-in3": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.4s both",
+                "nav-in4": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.5s both",
+                "nav-in5": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.6s both",
+                "nav-in6": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.7s both",
+                "nav-in7": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.8s both",
                 "footer-in": "flip-in-hor-top 0.5s both",
                 "session-in": "text-focus 0.5s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",
                 "part-in": "text-focus 1s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",

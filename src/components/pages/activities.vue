@@ -26,12 +26,19 @@ const dec = ["最終発表会", "成果報告書作成"];
 <template>
   <div
       class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
-    <div class="mt-32 flex flex-col font-Poppins text-white">
+    <div class="mt-32 flex flex-col font-Default text-white">
       <div class="animate-session-in">
         <h1 class="font-bold text-center text-6xl md:text-7xl">Activities</h1>
       </div>
       <div class="place-self-center mt-10">
         <div class="p-2 mx-auto flex flex-col md:grid grid-cols-9">
+          <div class="flex md:contents">
+            <div class="animate-vertical-in col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-16 w-4 flex items-center justify-center">
+                <div class="h-full w-0.5 bg-white pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
           <left month="March" :contents="mar" :images="mar_images"/>
           <right month="April" :contents="apr" :images="apr_images"/>
           <left month="May" :contents="may" :images="may_images"/>
@@ -43,9 +50,9 @@ const dec = ["最終発表会", "成果報告書作成"];
           <left month="November" :contents="nov" :images="nov_images"/>
           <right month="December" :contents="dec"/>
           <div class="flex md:contents">
-            <div class="animate-line-in relative col-start-5 col-end-6 mr-10 md:mx-auto">
-              <div class="h-60 w-6 flex items-center justify-center">
-                <div class="h-full w-0.5 pointer-events-none bg-white"></div>
+            <div class="animate-vertical-in col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-56 w-4 flex items-center justify-center">
+                <div class="h-full w-0.5 bg-white pointer-events-none"></div>
               </div>
             </div>
           </div>

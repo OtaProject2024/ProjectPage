@@ -21,15 +21,15 @@ stlLoader.load("./assets/model/murdock.stl", (geometry) => {
 });
 
 // Random particles
-const particulars = Array.from({length: 1500}, () => {
+const particulars = Array.from({length: 3000}, () => {
   const particular = new THREE.Mesh(
-      new THREE.CircleGeometry(0.03, 3),
+      new THREE.CircleGeometry(0.05, 3),
       new THREE.MeshNormalMaterial()
   );
   particular.position.set(
-      (Math.random() - 0.5) * 28,
-      (Math.random() - 0.5) * 28,
-      (Math.random() - 0.5) * 28
+      (Math.random() - 0.5) * 128,
+      (Math.random() - 0.5) * 128,
+      (Math.random() - 0.5) * 128
   );
   particular.rotation.set(
       (Math.random() - 0.5) * 14,
@@ -92,14 +92,15 @@ function updateCamera() {
 // particles animate
 function particlesAnimate() {
   particulars.forEach((particular) => {
-    if (particular.position.x > 7) {
-      particular.position.x = -7;
-    }
-    if (particular.position.y > 7) {
-      particular.position.y = -7;
-    }
     particular.position.x += 0.01;
     particular.position.y += 0.01;
+
+    if (particular.position.x > 64) {
+      particular.position.x = (Math.random() - 0.5) * 128
+    }
+    if (particular.position.y > 64) {
+      particular.position.y = (Math.random() - 0.5) * 128
+    }
   });
 }
 
@@ -131,5 +132,5 @@ onResize();
 </script>
 
 <template>
-  <div class="absolute" id="three"></div>
+  <div class="absolute font-Default" id="three"></div>
 </template>
