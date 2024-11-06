@@ -7,14 +7,14 @@ import model from "../globals/model.vue";
     <p>
       準備中
     </p>
-    <model path="/assets/model/m1.stl" :scale="0.0015"></model>
+    <model path="/assets/model/m1.glb" :scale="1.75"></model>
     <p class="mt-7">
       準備中
     </p>
-    <model path="/assets/model/m2.stl" :scale="0.025"></model>
+    <model path="/assets/model/m2.glb" :scale="24.55"></model>
     <p class="mt-7">
       準備中
     </p>
-    <model path="/assets/model/m1.stl" :scale="0.0015"></model>
+    <model path="/assets/model/m3.glb" :scale="0.0175" :positionY="-1.25" :rotation="true"></model>
   </div>
 </template>

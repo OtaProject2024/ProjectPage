@@ -1,11 +1,19 @@
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue';
 import * as THREE from 'three';
-import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const props = defineProps({
   path: String,
-  scale: Number
+  scale: Number,
+  positionY: {
+    type: Number,
+    default: 0
+  },
+  rotation: {
+    type: Boolean,
+    default: false
+  },
 });
 
 const canvasRef = ref(null);
@@ -14,22 +22,20 @@ const frameRef = ref(null);
 // scene
 const scene = new THREE.Scene();
 
-// STL model load
-const stlLoader = new STLLoader();
+// GLB model load
+const glbLoader = new GLTFLoader();
 
-let mesh;
-stlLoader.load(props.path, (geometry) => {
-  const material = new THREE.MeshStandardMaterial({color: "#ababab", roughness: 0});
-  mesh = new THREE.Mesh(geometry, material);
-  mesh.geometry.center();
-  mesh.scale.set(props.scale, props.scale, props.scale);
-  mesh.rotation.x = -Math.PI / 2;
-  mesh.rotation.z = -Math.PI / 2;
-  scene.add(mesh);
+glbLoader.load(props.path, (geometry) => {
+  const model = geometry.scene;
+  model.position.set(0, props.positionY, 0);
+  model.scale.set(props.scale, props.scale, props.scale);
+  model.rotation.y = props.rotation ? Math.PI / 2 : -Math.PI / 2;
+  scene.add(model);
 
+  // Animate
   function animate() {
     requestAnimationFrame(animate);
-    mesh.rotation.z += 0.001;
+    model.rotation.y += 0.01;
     renderer.render(scene, camera);
   }
 
