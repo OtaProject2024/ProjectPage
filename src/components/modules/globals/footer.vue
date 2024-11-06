@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed} from "vue";
+import {ref, computed, onMounted, onUnmounted} from "vue";
 import {useRoute} from "vue-router";
 import {event} from 'vue-gtag'
 
@@ -16,10 +16,25 @@ const toggle = () => {
   text.value = text.value === "share" ? "return" : "share";
 };
 
+const footerRef = ref(null);
+const closeToggle = (event) => {
+  if (footerRef.value && !footerRef.value.contains(event.target)) {
+    flg.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('mousedown', closeToggle);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('mousedown', closeToggle);
+});
+
 // Provide shared url
 const flgCopy = ref(false);
 const baseUrl = location.href;
-const xUrl = ref(`https://x.com/intent/post?text=OtaProject2024%0A&url=${baseUrl}`);
+const xUrl = ref(`https://x.com/share?text=OtaProject2024%0A&url=${baseUrl}`);
 const facebookUrl = ref(`https://www.facebook.com/share.php?u=${baseUrl}`);
 
 const copy = async () => {
@@ -52,7 +67,7 @@ const sharePush = () => {
       leave-to-class="translate-x-full opacity-0"
       leave-active-class="transition duration-700"
   >
-    <footer v-show="showFooter"
+    <footer v-show="showFooter" ref="footerRef"
             class="absolute right-0 z-20 bottom-24 sm:bottom-12 md:bottom-6 lg:bottom-3 xl:bottom-0">
       <div class="flex flex-col font-Default font-light text-white">
         <transition

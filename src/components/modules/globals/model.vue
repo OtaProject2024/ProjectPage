@@ -35,7 +35,7 @@ glbLoader.load(props.path, (geometry) => {
   // Animate
   function animate() {
     requestAnimationFrame(animate);
-    model.rotation.y += 0.01;
+    model.rotation.y += 0.0025;
     renderer.render(scene, camera);
   }
 

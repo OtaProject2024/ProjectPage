@@ -2,10 +2,13 @@
 import part from "../modules/globals/part.vue";
 import fusion from "../modules/contents/fusion.vue";
 import program from "../modules/contents/program.vue";
+import guide from "../modules/contents/fishguide.vue";
+import site from "../modules/contents/site.vue";
 </script>
 
 <template>
-  <div class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
+  <div
+      class="animate-bg-in absolute h-screen w-screen z-5 overflow-y-scroll overscroll-none bg-zinc-900 bg-opacity-50 backdrop-blur-sm">
     <div class="mt-32 flex flex-col items-center font-Default text-white">
       <div class="animate-session-in">
         <h1 class="font-bold text-center text-6xl md:text-7xl">Contents</h1>
@@ -15,6 +18,10 @@ import program from "../modules/contents/program.vue";
         <fusion/>
         <part title="source code"/>
         <program/>
+        <part title="Fishing Guide"/>
+        <guide/>
+        <part title="WEB site"/>
+        <site/>
       </div>
     </div>
   </div>

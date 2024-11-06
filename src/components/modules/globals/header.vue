@@ -92,7 +92,7 @@ const toggle = () => {
       leave-to-class="translate-x-full opacity-0"
       leave-active-class="transition duration-700"
   >
-    <aside v-show="menuOpen" class="fixed top-0 right-0 h-full w-52 bg-zinc-800 z-40">
+    <aside v-show="menuOpen" class="fixed top-0 right-0 h-full w-52 bg-zinc-900 z-40">
       <div class="relative h-full font-Default text-white text-3xl md:text-4xl p-5 mt-14">
         <ul class="flex flex-col font-light text-base space-y-4">
           <li class="animate-nav-in1 w-min whitespace-nowrap" :class="{'active': active('/')}">
@@ -172,7 +172,7 @@ const toggle = () => {
           </li>
         </ul>
         <div class="absolute right-3 bottom-10">
-          <img class="grayscale opacity-50 size-32" src="/assets/general/logo_tr.png" alt="logo">
+          <img class="grayscale size-36" src="/assets/general/logo_tr.png" alt="logo">
         </div>
       </div>
     </aside>
