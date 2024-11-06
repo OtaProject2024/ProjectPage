@@ -11,13 +11,13 @@ import card from "../globals/card.vue";
       初めての方でも安心して釣りに出かけられるよう、ルールやマナーについても分かりやすくまとめています。
       自然と一体となる時間を楽しみながら、初めての釣りの一歩を踏み出してみましょう。
     </p>
-    <card title="Fishing Guide" text="For all beginning fishermen."
-          path="https://github.com/OtaProject2024/ProjectPage" img="assets/general/logo.png"/>
+    <card title="Fishing_Guide - How to starting fishing" text="For all beginning fishermen."
+          path="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide#/" img="assets/general/logo_blue.png"/>
     <p>
       このサイトは、Vue.jsとTailwind CSSで構築され、シンプルかつ直感的なデザインを追求しました。
       Vue.jsのスムーズな動作とTailwind CSSによる柔軟なデザインにより、見やすく使いやすいインターフェースを実現しています。
     </p>
-    <card title="OtaProject2024 / FishingGuid" text="GitHub is where OtaProject2024 builds software."
+    <card title="OtaProject2024 / FishingGuide" text="GitHub is where OtaProject2024 builds software."
           path="https://github.com/OtaProject2024/FishingGuid" img="assets/general/logo.png"/>
   </div>
 </template>
