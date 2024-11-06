@@ -69,17 +69,23 @@ onUnmounted(() => {
                     :class="{'rotate-90 duration-500': showProgramDropdown}">&gt;</span>
               {{ selectedProgram || "全てのプログラム" }}
             </button>
-            <div v-show="showProgramDropdown" class="absolute left-0 w-full text-left rounded-lg bg-zinc-800 mt-2">
-              <ul>
-                <li class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
-                    @click="selectedProgram = ''; showProgramDropdown = false">全てのプログラム
-                </li>
-                <li v-for="program in programs" :key="program"
-                    class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
-                    @click="selectedProgram = program; showProgramDropdown = false">{{ program }}
-                </li>
-              </ul>
-            </div>
+            <transition
+                enter-from-class="opacity-0"
+                enter-active-class="duration-300"
+                leave-to-class="opacity-0"
+                leave-active-class="duration-300">
+              <div v-show="showProgramDropdown" class="absolute left-0 w-full text-left rounded-lg bg-zinc-800 mt-2">
+                <ul>
+                  <li class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
+                      @click="selectedProgram = ''; showProgramDropdown = false">全てのプログラム
+                  </li>
+                  <li v-for="program in programs" :key="program"
+                      class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
+                      @click="selectedProgram = program; showProgramDropdown = false">{{ program }}
+                  </li>
+                </ul>
+              </div>
+            </transition>
           </div>
         </div>
 
@@ -92,17 +98,23 @@ onUnmounted(() => {
                     :class="{'rotate-90 duration-500': showRoleDropdown}">&gt;</span>
               {{ selectedRole || "全ての役割" }}
             </button>
-            <div v-show="showRoleDropdown" class="absolute left-0 w-full text-left rounded-lg bg-zinc-800 mt-2">
-              <ul>
-                <li class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
-                    @click="selectedRole = ''; showRoleDropdown = false">全ての役割
-                </li>
-                <li v-for="role in roles" :key="role"
-                    class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
-                    @click="selectedRole = role; showRoleDropdown = false">{{ role }}
-                </li>
-              </ul>
-            </div>
+            <transition
+                enter-from-class="opacity-0"
+                enter-active-class="duration-300"
+                leave-to-class="opacity-0"
+                leave-active-class="duration-300">
+              <div v-show="showRoleDropdown" class="absolute left-0 w-full text-left rounded-lg bg-zinc-800 mt-2">
+                <ul>
+                  <li class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
+                      @click="selectedRole = ''; showRoleDropdown = false">全ての役割
+                  </li>
+                  <li v-for="role in roles" :key="role"
+                      class="cursor-pointer rounded-lg duration-500 hover:bg-zinc-900 px-4 py-2"
+                      @click="selectedRole = role; showRoleDropdown = false">{{ role }}
+                  </li>
+                </ul>
+              </div>
+            </transition>
           </div>
         </div>
       </div>
