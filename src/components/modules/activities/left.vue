@@ -1,13 +1,14 @@
 <script setup>
-import {ref} from "vue";
+import {ref, defineProps} from "vue";
 
-const type = defineProps({
+const props = defineProps({
   month: String,
   contents: Array,
   images: Array,
 });
 
-let flg = ref(false);
+// expansion control
+const flg = ref(false);
 const click = () => {
   flg.value = !flg.value;
 };
@@ -42,7 +43,7 @@ const click = () => {
             enter-active-class="duration-400"
             leave-to-class="opacity-0"
             leave-active-class="duration-400">
-          <ul class="list-none list-inside grid justify-items-center mt-7" v-show="flg">
+          <ul v-show="flg" class="list-none list-inside grid justify-items-center mt-7">
             <li v-for="img in images"><img class="rounded-lg w-52 md:w-72 mb-2" :src="img" alt="img"/></li>
           </ul>
         </transition>

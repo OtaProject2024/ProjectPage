@@ -1,5 +1,5 @@
 <script setup>
-const type = defineProps({
+const props = defineProps({
   name: String,
   course: String,
   roles: Array,

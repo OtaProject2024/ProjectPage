@@ -1,5 +1,5 @@
 <script setup>
-const type = defineProps({
+const props = defineProps({
   title: String,
   text: String,
   path: String,

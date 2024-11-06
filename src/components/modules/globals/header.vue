@@ -1,10 +1,12 @@
 <script setup>
-import {ref} from 'vue';
-import {useRoute} from "vue-router";
+import {ref} from "vue";
+import {useRoute} from 'vue-router';
 
+// Monitor current path
 const route = useRoute();
 const active = (path) => route.path === path;
 
+// Hamburger menu control
 const menuOpen = ref(false);
 const toggle = () => {
   menuOpen.value = !menuOpen.value;

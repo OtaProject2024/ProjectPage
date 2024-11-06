@@ -21,24 +21,29 @@ stlLoader.load("./assets/model/murdock.stl", (geometry) => {
 });
 
 // Random particles
-const particulars = Array.from({length: 3000}, () => {
-  const particular = new THREE.Mesh(
-      new THREE.CircleGeometry(0.05, 3),
-      new THREE.MeshNormalMaterial()
-  );
-  particular.position.set(
-      (Math.random() - 0.5) * 128,
-      (Math.random() - 0.5) * 128,
-      (Math.random() - 0.5) * 128
-  );
-  particular.rotation.set(
-      (Math.random() - 0.5) * 14,
-      (Math.random() - 0.5) * 14,
-      (Math.random() - 0.5) * 14
-  );
-  scene.add(particular);
-  return particular;
-});
+const createParticles = (count) => {
+  const particles = [];
+  for (let i = 0; i < count; i++) {
+    const particle = new THREE.Mesh(
+        new THREE.CircleGeometry(0.05, 3),
+        new THREE.MeshNormalMaterial()
+    );
+    particle.position.set(
+        (Math.random() - 0.5) * 128,
+        (Math.random() - 0.5) * 128,
+        (Math.random() - 0.5) * 128
+    );
+    particle.rotation.set(
+        (Math.random() - 0.5) * 14,
+        (Math.random() - 0.5) * 14,
+        (Math.random() - 0.5) * 14
+    );
+    scene.add(particle);
+    particles.push(particle);
+  }
+  return particles;
+};
+const particulars = createParticles(3000);
 
 // Light
 const ambientLight = new THREE.AmbientLight(0x404040);
@@ -47,10 +52,6 @@ const directLight = new THREE.DirectionalLight(0xffffff, 5);
 directLight.position.set(5, 0, 2);
 [ambientLight, hemisphereLight, directLight,].forEach(light => scene.add(light));
 
-// Camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
-
 // Renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -58,9 +59,13 @@ onMounted(() => {
   document.getElementById("three").appendChild(renderer.domElement);
 });
 
+// Camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
 // Animate
 // update camera
-let flgP, flgR = true;
+let flgP = true, flgR = true;
 
 function updateCamera() {
   camera.rotation.x += 0.00001;
@@ -127,8 +132,8 @@ function onResize() {
   camera.updateProjectionMatrix();
 }
 
-window.addEventListener("resize", onResize);
 onResize();
+window.addEventListener("resize", onResize);
 </script>
 
 <template>
