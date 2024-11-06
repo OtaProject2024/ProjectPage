@@ -12,7 +12,7 @@ import card from "../globals/card.vue";
       自然と一体となる時間を楽しみながら、初めての釣りの一歩を踏み出してみましょう。
     </p>
     <card title="Fishing Guide" text="For all beginning fishermen."
-          path="https://github.com/OtaProject2024/ProjectPage" img="assets/general/logo_blue.png"/>
+          path="https://github.com/OtaProject2024/ProjectPage" img="assets/general/logo.png"/>
     <p>
       このサイトは、Vue.jsとTailwind CSSで構築され、シンプルかつ直感的なデザインを追求しました。
       Vue.jsのスムーズな動作とTailwind CSSによる柔軟なデザインにより、見やすく使いやすいインターフェースを実現しています。
