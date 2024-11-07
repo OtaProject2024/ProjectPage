@@ -20,7 +20,7 @@ import site from "../modules/contents/site.vue";
         <program/>
         <part title="Fishing Guide"/>
         <guide/>
-        <part title="WEB site"/>
+        <part title="website"/>
         <site/>
       </div>
     </div>

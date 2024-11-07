@@ -9,8 +9,9 @@ import card from "../globals/card.vue";
       Three.jsを活用してモデルの描画を行い、デザインにはTailwind CSS を用いて美しいスタイルを実現しています。
       また、vue-gtagを使用することで、ユーザーのアクセス解析も可能です。
     </p>
-    <card title="OtaProject2024 / ProjectPage" text="GitHub is where OtaProject2024 builds software."
-          path="https://github.com/OtaProject2024/ProjectPage" img="assets/general/logo.png"/>
+    <card site="GitHub" title="OtaProject2024 / ProjectPage"
+          text="GitHub is where OtaProject2024 builds software."
+          path="https://github.com/OtaProject2024/ProjectPage"/>
     <p>
       SPAのメリットとして、最初の読み込み後はサーバーとの通信が非同期で行われるため、ページ全体を再読み込みすることなく動的なコンテンツの更新が可能です。
       これにより、ページ遷移に伴う待ち時間が大幅に短縮され、ユーザーエクスペリエンスが向上します。
