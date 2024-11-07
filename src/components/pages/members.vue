@@ -3,15 +3,15 @@ import {ref, onMounted, onUnmounted, computed} from 'vue';
 import profile from "../modules/members/profile.vue";
 
 const profiles = [
-  {name: "はぎ", course: "PC program", roles: ["プログラミング", "3Dモデリング"], path: "assets/icon/hagi.jpg"},
-  {name: "メロンパン星人", course: "PC program", roles: ["3Dモデリング", "電子回路設計"], path: "assets/icon/kake.jpg"},
-  {name: "ピンキー", course: "IB program", roles: ["マネージャー", "デザイン"], path: "assets/icon/pin.jpg"},
-  {name: "虫", course: "DS program", roles: ["3Dモデリング", "動画制作"], path: "assets/icon/huku.jpg"},
   {name: "池マル", course: "PC program", roles: ["リーダー", "3Dモデリング"], path: "assets/icon/ike.jpg"},
   {name: "りょ", course: "NS program", roles: ["サブリーダー", "プログラミング"], path: "assets/icon/ry.jpg"},
+  {name: "虫", course: "DS program", roles: ["3Dモデリング", "動画制作"], path: "assets/icon/huku.jpg"},
+  {name: "メロンパン星人", course: "PC program", roles: ["3Dモデリング", "電子回路設計"], path: "assets/icon/kake.jpg"},
   {name: "まひ", course: "PC program", roles: ["3Dモデリング", "デザイン"], path: "assets/icon/mahi.jpg"},
+  {name: "はぎ", course: "PC program", roles: ["プログラミング", "3Dモデリング"], path: "assets/icon/hagi.jpg"},
   {name: "ぷぅさん", course: "PC program", roles: ["プログラミング", "3Dモデリング"], path: "assets/icon/kuma.jpg"},
   {name: "시준", course: "NS program", roles: ["広報・連絡", "プログラミング"], path: "assets/icon/ki.jpg"},
+  {name: "ピンキー", course: "IB program", roles: ["マネージャー", "デザイン"], path: "assets/icon/pin.jpg"},
   {name: "太田 隆博", course: "担当教員", roles: ["パクチーがキライです"], path: "assets/icon/ota.jpg"}
 ];
 
@@ -59,8 +59,8 @@ onUnmounted(() => {
         <h1 class="font-bold text-center text-6xl md:text-7xl">Members</h1>
       </div>
 
-      <div class="flex flex-row justify-center md:justify-end font-light text-white text-base mt-5 z-10">
-        <div class="mr-3">
+      <div class="flex flex-col md:flex-row items-end md:justify-end font-light text-white text-base mt-5">
+        <div class="mr-3 z-20">
           <a>Program</a>
           <div ref="programDropdownRef" class="relative">
             <button class="w-44 text-left rounded-lg duration-500 bg-zinc-800 bg-opacity-70 hover:bg-zinc-900 p-2"
@@ -89,7 +89,7 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div class="md:mr-7">
+        <div class="mr-3 md:mr-7 md:mt-2 z-10">
           <a>Role</a>
           <div ref="roleDropdownRef" class="relative">
             <button class="w-52 text-left rounded-lg duration-500 bg-zinc-800 bg-opacity-70 hover:bg-zinc-900 p-2"
@@ -119,6 +119,9 @@ onUnmounted(() => {
         </div>
       </div>
 
+      <div v-if="filteredProfiles.length === 0" class="text-center text-white mt-10">
+        選択された条件に一致するメンバーはおりません。
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <profile
             v-for="member in filteredProfiles"
