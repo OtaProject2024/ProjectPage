@@ -61,7 +61,7 @@ onUnmounted(() => {
 
       <div class="flex flex-col md:flex-row items-end md:justify-end font-light text-white text-base mt-5">
         <div class="mr-3 z-20">
-          <a>Program</a>
+          <a class="block w-full text-right md:text-left pr-0.5">Program</a>
           <div ref="programDropdownRef" class="relative">
             <button class="w-44 text-left rounded-lg duration-500 bg-zinc-800 bg-opacity-70 hover:bg-zinc-900 p-2"
                     @click="showProgramDropdown = !showProgramDropdown">
@@ -89,8 +89,8 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <div class="mr-3 md:mr-7 md:mt-2 z-10">
-          <a>Role</a>
+        <div class="mr-3 md:mr-7 mt-2 md:mt-0 z-10">
+          <a class="block w-full text-right md:text-left pr-0.5">Role</a>
           <div ref="roleDropdownRef" class="relative">
             <button class="w-52 text-left rounded-lg duration-500 bg-zinc-800 bg-opacity-70 hover:bg-zinc-900 p-2"
                     @click="showRoleDropdown = !showRoleDropdown">
