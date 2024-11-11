@@ -12,7 +12,7 @@ module.exports = {
             animation: {
                 "title-in": "text-focus 1s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",
                 "bg-in": "text-focus 0.3s cubic-bezier(0.500, 0.090, 0.700, 0.500) both",
-                "nav-title-in": "slide-in-left 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) both",
+                "nav-title-in": "slide-in-left 1.0s cubic-bezier(0.250, 1.000, 0.350, 1.000) both",
                 "nav-in1": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.2s both",
                 "nav-in2": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.3s both",
                 "nav-in3": "slide-in-right 0.5s cubic-bezier(0.250, 1.000, 0.350, 1.000) 0.4s both",

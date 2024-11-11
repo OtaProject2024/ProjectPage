@@ -9,7 +9,6 @@ const scene = new THREE.Scene();
 // STL model load
 const stlLoader = new STLLoader();
 const randomColor = `#${Array.from({length: 6}, () => (16 * Math.random() | 0).toString(16)).join('')}`;
-
 stlLoader.load("./assets/model/murdock.stl", (geometry) => {
   const material = new THREE.MeshStandardMaterial({color: randomColor, roughness: 0});
   const mesh = new THREE.Mesh(geometry, material);

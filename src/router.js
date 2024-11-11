@@ -5,27 +5,27 @@ const routes = [
   {
     path: "/",
     component: () => import("./components/pages/home.vue"),
-    meta: { title: BASE_TITLE + "home" },
+    meta: { title: BASE_TITLE + "Home" },
   },
   {
     path: "/about",
     component: () => import("./components/pages/about.vue"),
-    meta: { title: BASE_TITLE + "about" },
+    meta: { title: BASE_TITLE + "About" },
   },
   {
     path: "/members",
     component: () => import("./components/pages/members.vue"),
-    meta: { title: BASE_TITLE + "members" },
+    meta: { title: BASE_TITLE + "Members" },
   },
   {
     path: "/activities",
     component: () => import("./components/pages/activities.vue"),
-    meta: { title: BASE_TITLE + "active" },
+    meta: { title: BASE_TITLE + "Activities" },
   },
   {
     path: "/contents",
     component: () => import("./components/pages/contents.vue"),
-    meta: { title: BASE_TITLE + "content" },
+    meta: { title: BASE_TITLE + "Contents" },
   },
   {
     path: "/:pathMatch(.*)*",

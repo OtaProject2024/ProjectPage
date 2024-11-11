@@ -29,7 +29,8 @@ const filteredProfiles = computed(() => {
 });
 
 const programs = Array.from(new Set(profiles.map(profile => profile.course)));
-const roles = Array.from(new Set(profiles.flatMap(profile => profile.roles)));
+// const roles = Array.from(new Set(profiles.flatMap(profile => profile.roles)));
+const roles = ["3Dモデリング", "プログラミング", "デザイン"];
 
 const programDropdownRef = ref(null);
 const roleDropdownRef = ref(null);

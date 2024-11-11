@@ -13,7 +13,7 @@ const props = defineProps({
     <div class="animate-profile-in text-center mt-3">
       <div class="text-center">
         <p class="font-light text-gray-300 text-lg mb-1">{{ course }}</p>
-        <p class="text-white text-2xl mb-2">{{ name }}</p>
+        <h2 class="text-white text-2xl mb-2">{{ name }}</h2>
         <p v-for="role in roles" class="font-light text-gray-200 text-md">{{ role }}</p>
       </div>
     </div>

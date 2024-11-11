@@ -11,8 +11,8 @@ const props = defineProps({
   <div class="w-full rounded-lg duration-500 bg-zinc-800 bg-opacity-80 group hover:bg-zinc-900 p-3 my-4">
     <a :href="path" target="_blank" rel="noreferrer">
       <div class="flex flex-col">
-        <a class="font-light text-gray-400 text-sm">{{ site }}</a>
-        <a class="font-bold text-white text-xl mb-2">{{ title }}</a>
+        <h4 class="font-light text-gray-400 text-sm">{{ site }}</h4>
+        <h3 class="font-bold text-white text-xl mb-2">{{ title }}</h3>
         <p class="font-light text-gray-200 text-base">{{ text }}</p>
         <div class="self-end font-light text-white text-sm">
           <a>READ MORE</a>

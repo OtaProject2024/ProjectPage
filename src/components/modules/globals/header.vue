@@ -1,10 +1,11 @@
 <script setup>
-import {ref} from "vue";
+import {computed, ref} from "vue";
 import {useRoute} from 'vue-router';
 
 // Monitor current path
 const route = useRoute();
 const active = (path) => route.path === path;
+const showHeaderH1 = computed(() => route.meta.title !== "OtaProject2024 | Home");
 
 // Hamburger menu control
 const menuOpen = ref(false);
@@ -16,13 +17,14 @@ const toggle = () => {
 <template>
   <header class="absolute w-screen z-20 p-3 bg-zinc-900 bg-opacity-80">
     <div class="flex justify-between font-Default text-white text-3xl md:text-4xl">
-      <div>
-        <h1 class="animate-nav-title-in font-bold pl-1">
+      <div class="flex flex-row">
+        <h1 v-show="showHeaderH1" class="animate-nav-title-in font-bold pl-1">
           <router-link to="/">OtaProject2024</router-link>
         </h1>
+        <h1 class="animate-nav-title-in select-none font-bold pl-1">&nbsp;</h1>
       </div>
 
-      <div class="hidden lg:flex justify-end ml-1 mr-1 pt-3 w-full">
+      <nav class="hidden lg:flex justify-end ml-1 mr-1 pt-3 w-full">
         <ul class="flex flex-row font-light text-base">
           <li class="animate-nav-in1 w-min whitespace-nowrap pr-5" :class="{'active': active('/about')}">
             <router-link to="/about" class="group transition">
@@ -63,19 +65,19 @@ const toggle = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
   <div class="animate-nav-in1 fixed top-0 right-0 lg:hidden flex items-center mt-3 md:mt-3.5 mr-2 z-50">
-    <button @click="toggle" class="flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
+    <div @click="toggle" class="flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
       <div class="w-5 h-0.5 bg-white mb-1 transition duration-700"
            :class="{'transform rotate-45 translate-y-1.5': menuOpen}"></div>
       <div class="w-5 h-0.5 bg-white mb-1 transition duration-700"
            :class="{'transform opacity-0': menuOpen}"></div>
       <div class="w-5 h-0.5 bg-white mb-1 transition duration-700"
            :class="{'transform -rotate-45 -translate-y-1.5': menuOpen}"></div>
-    </button>
+    </div>
   </div>
 
   <transition
@@ -93,7 +95,7 @@ const toggle = () => {
       leave-active-class="transition duration-700"
   >
     <aside v-show="menuOpen" class="fixed top-0 right-0 h-full w-52 bg-zinc-900 z-40">
-      <div class="relative h-full font-Default text-white text-3xl md:text-4xl p-5 mt-14">
+      <nav class="relative h-full font-Default text-white text-3xl md:text-4xl p-5 mt-14">
         <ul class="flex flex-col font-light text-base space-y-4">
           <li class="animate-nav-in1 w-min whitespace-nowrap" :class="{'active': active('/')}">
             <router-link to="/" class="group transition" @click="toggle">
@@ -174,7 +176,7 @@ const toggle = () => {
         <div class="absolute right-3 bottom-10">
           <img class="grayscale size-36" src="/assets/general/logo_tr.png" alt="logo">
         </div>
-      </div>
+      </nav>
     </aside>
   </transition>
 </template>

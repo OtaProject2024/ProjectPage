@@ -24,7 +24,6 @@ const scene = new THREE.Scene();
 
 // GLB model load
 const glbLoader = new GLTFLoader();
-
 glbLoader.load(props.path, (geometry) => {
   const model = geometry.scene;
   model.position.set(0, props.positionY, 0);
