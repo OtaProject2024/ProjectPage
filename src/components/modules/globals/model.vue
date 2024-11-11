@@ -23,10 +23,10 @@ const frameRef = ref(null);
 // scene
 const scene = new THREE.Scene();
 
-// GLB model load
+// GLB models load
 const glbLoader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath("./assets/libs/draco/");
+dracoLoader.setDecoderPath("./scripts/libraries/draco/");
 glbLoader.setDRACOLoader(dracoLoader);
 
 glbLoader.load(props.path, (m) => {

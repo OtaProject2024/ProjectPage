@@ -7,14 +7,14 @@ import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader.js";
 // scene
 const scene = new THREE.Scene();
 
-// GLB model load
+// GLB models load
 const glbLoader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath("./assets/libs/draco/");
+dracoLoader.setDecoderPath("./scripts/libraries/draco/");
 glbLoader.setDRACOLoader(dracoLoader);
 
 const randomColor = `#${Array.from({length: 6}, () => (16 * Math.random() | 0).toString(16)).join('')}`;
-glbLoader.load("./assets/model/m1_draco.glb", (m) => {
+glbLoader.load("./assets/models/m1_draco.glb", (m) => {
   const model = m.scene;
   model.position.set(0, 0, 0);
   model.scale.set(1.85, 1.85, 1.85);

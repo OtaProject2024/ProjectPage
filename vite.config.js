@@ -27,6 +27,14 @@ export default defineConfig({
                     vue: ["vue", "vue-router", "vue-gtag"],
                     three: ["three"],
                 },
+                entryFileNames: 'scripts/[name].[hash].js',
+                chunkFileNames: 'scripts/chunks/[name].[hash].js',
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name.endsWith('.css')) {
+                        return 'style/[name].[hash][extname]';
+                    }
+                    return 'assets/[name].[hash][extname]';
+                },
             },
         },
     },
