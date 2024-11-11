@@ -17,14 +17,15 @@ facilitating dynamic content updates without full page reloads.
 - JavaScript
 - Node.js (v20.12.2)
 - Vite (v5.1.0)
+    - Terser (v5.36.0)
 
 ### Frameworks/Libraries
 
-- Vue.js (v3.4.15)
-    - Vue Router (v4.2.5)
+- Vue.js (v3.5.12)
+    - Vue Router (v4.4.5)
     - Vue Gtag (v2.0.1)
-- Three.js (r161)
-- Tailwind CSS (v3.4.1)
+- Three.js (r170)
+- Tailwind CSS (v3.4.14)
 
 ### Deployment
 

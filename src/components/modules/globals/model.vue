@@ -2,6 +2,7 @@
 import {ref, onMounted, onUnmounted} from 'vue';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader';
 
 const props = defineProps({
   path: String,
@@ -24,8 +25,12 @@ const scene = new THREE.Scene();
 
 // GLB model load
 const glbLoader = new GLTFLoader();
-glbLoader.load(props.path, (geometry) => {
-  const model = geometry.scene;
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("./assets/libs/draco/");
+glbLoader.setDRACOLoader(dracoLoader);
+
+glbLoader.load(props.path, (m) => {
+  const model = m.scene;
   model.position.set(0, props.positionY, 0);
   model.scale.set(props.scale, props.scale, props.scale);
   model.rotation.y = props.rotation ? Math.PI / 2 : -Math.PI / 2;

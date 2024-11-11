@@ -1,22 +1,28 @@
 <script setup>
 import {onMounted} from "vue";
 import * as THREE from "three";
-import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
+import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader.js";
+import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader.js";
 
 // scene
 const scene = new THREE.Scene();
 
-// STL model load
-const stlLoader = new STLLoader();
+// GLB model load
+const glbLoader = new GLTFLoader();
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("./assets/libs/draco/");
+glbLoader.setDRACOLoader(dracoLoader);
+
 const randomColor = `#${Array.from({length: 6}, () => (16 * Math.random() | 0).toString(16)).join('')}`;
-stlLoader.load("./assets/model/murdock.stl", (geometry) => {
-  const material = new THREE.MeshStandardMaterial({color: randomColor, roughness: 0});
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.geometry.center();
-  mesh.scale.set(0.0015, 0.0015, 0.0015);
-  mesh.rotation.x = -Math.PI / 2;
-  mesh.rotation.z = -Math.PI / 2;
-  scene.add(mesh);
+glbLoader.load("./assets/model/m1_draco.glb", (m) => {
+  const model = m.scene;
+  model.position.set(0, 0, 0);
+  model.scale.set(1.85, 1.85, 1.85);
+  model.rotation.y = -Math.PI / 2;
+  model.traverse(function (child) {
+    child.material = new THREE.MeshStandardMaterial({color: randomColor, roughness: 0});
+  });
+  scene.add(model);
 });
 
 // Random particles
@@ -28,9 +34,9 @@ const createParticles = (count) => {
         new THREE.MeshNormalMaterial()
     );
     particle.position.set(
-        (Math.random() - 0.5) * 128,
-        (Math.random() - 0.5) * 128,
-        (Math.random() - 0.5) * 128
+        (Math.random() - 0.5) * 64,
+        (Math.random() - 0.5) * 64,
+        (Math.random() - 0.5) * 64
     );
     particle.rotation.set(
         (Math.random() - 0.5) * 14,
@@ -99,10 +105,10 @@ function particlesAnimate() {
     particular.position.x += 0.01;
     particular.position.y += 0.01;
 
-    if (particular.position.x > 64) {
+    if (particular.position.x > 32) {
       particular.position.x = (Math.random() - 0.5) * 128
     }
-    if (particular.position.y > 64) {
+    if (particular.position.y > 32) {
       particular.position.y = (Math.random() - 0.5) * 128
     }
   });

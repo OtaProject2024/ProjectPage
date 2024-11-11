@@ -25,7 +25,7 @@ const click = () => {
 
     <div class="animate-month-right-in col-start-6 col-end-10 mb-1 mr-auto">
       <div class="flex flex-col items-start">
-        <h2 class="text-4xl md:text-5xl">
+        <h2 class="cursor-pointer text-4xl md:text-5xl">
           <span class="inline-block duration-500" :class="{'rotate-90 duration-500': flg}">&gt;</span> {{ month }}
         </h2>
       </div>
