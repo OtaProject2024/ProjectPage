@@ -174,7 +174,7 @@ const toggle = () => {
           </li>
         </ul>
         <div class="absolute right-3 bottom-10">
-          <img class="grayscale size-36" src="/assets/general/logos/logo_tr.png" alt="logo">
+          <img class="grayscale size-36" src="/assets/general/logos/logo_tr.webp" alt="logo">
         </div>
       </nav>
     </aside>

@@ -98,12 +98,12 @@ const sharePush = () => {
               </li>
               <li class="cursor-pointer mr-7">
                 <a :href="xUrl" target="_blank" rel="noreferrer" @click="sharePush">
-                  <img class="h-7 w-7" src="/assets/general/logos/sns/X_logo.png" alt="X"/>
+                  <img class="h-7 w-7" src="/assets/general/logos/sns/X_logo.webp" alt="X"/>
                 </a>
               </li>
               <li class="cursor-pointer">
                 <a :href="facebookUrl" target="_blank" rel="noreferrer" @click="sharePush">
-                  <img class="h-7 w-7" src="/assets/general/logos/sns/Facebook_logo.png" alt="Facebook"/>
+                  <img class="h-7 w-7" src="/assets/general/logos/sns/Facebook_logo.webp" alt="Facebook"/>
                 </a>
               </li>
             </ul>

@@ -4,6 +4,7 @@ import fusion from "../modules/contents/fusion.vue";
 import program from "../modules/contents/program.vue";
 import guide from "../modules/contents/fishguide.vue";
 import site from "../modules/contents/site.vue";
+import vi from "../modules/contents/video.vue";
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import site from "../modules/contents/site.vue";
         <guide/>
         <part title="website"/>
         <site/>
+        <part title="video"/>
+        <vi/>
       </div>
     </div>
   </div>
