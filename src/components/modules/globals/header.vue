@@ -100,8 +100,7 @@ const toggle = () => {
           <li class="animate-nav-in1 w-min whitespace-nowrap" :class="{'active': active('/')}">
             <router-link to="/" class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">home</span>
-                <a class="pl-2">Home</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">home</span>Home
               </div>
               <span class="mov-li"></span>
             </router-link>
@@ -109,8 +108,7 @@ const toggle = () => {
           <li class="animate-nav-in1 w-min whitespace-nowrap" :class="{'active': active('/about')}">
             <router-link to="/about" class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">help</span>
-                <a class="pl-2">About</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">help</span>About
               </div>
               <span class="mov-li"></span>
             </router-link>
@@ -118,8 +116,7 @@ const toggle = () => {
           <li class="animate-nav-in2 w-min whitespace-nowrap" :class="{'active': active('/members')}">
             <router-link to="/members" class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">group</span>
-                <a class="pl-2">Members</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">group</span>Members
               </div>
               <span class="mov-li"></span>
             </router-link>
@@ -127,8 +124,7 @@ const toggle = () => {
           <li class="animate-nav-in3 w-min whitespace-nowrap" :class="{'active': active('/activities')}">
             <router-link to="/activities" class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">directions_run</span>
-                <a class="pl-2">Activities</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">directions_run</span>Activities
               </div>
               <span class="mov-li"></span>
             </router-link>
@@ -136,8 +132,7 @@ const toggle = () => {
           <li class="animate-nav-in4 w-min whitespace-nowrap" :class="{'active': active('/contents')}">
             <router-link to="/contents" class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">library_books</span>
-                <a class="pl-2">Contents</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">library_books</span>Contents
               </div>
               <span class="mov-li"></span>
             </router-link>
@@ -146,8 +141,7 @@ const toggle = () => {
             <a href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide" target="_blank" rel="noreferrer"
                class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">school</span>
-                <a class="pl-2">Fishing Guide</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">school</span>Fishing Guide
               </div>
               <span class="mov-li"></span>
             </a>
@@ -156,8 +150,7 @@ const toggle = () => {
             <a href="https://sites.google.com/senshu-u.jp/24otaproject" target="_blank" rel="noreferrer"
                class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">edit_calendar</span>
-                <a class="pl-2">Journal</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">edit_calendar</span>Journal
               </div>
               <span class="mov-li"></span>
             </a>
@@ -166,8 +159,7 @@ const toggle = () => {
             <a href="https://github.com/OtaProject2024" target="_blank" rel="noreferrer"
                class="group transition" @click="toggle">
               <div class="flex items-end pr-1">
-                <span class="material-icons text-xl md:text-2xl">code</span>
-                <a class="pl-2">GitHub</a>
+                <span class="material-icons text-xl md:text-2xl pr-2">code</span>GitHub
               </div>
               <span class="mov-li"></span>
             </a>

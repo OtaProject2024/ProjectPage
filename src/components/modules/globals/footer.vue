@@ -93,7 +93,7 @@ const sharePush = () => {
               <li class="cursor-pointer mr-7" @click="copy">
                 <div class="flex items-end">
                   <span class="material-icons text-lg md:text-xl">content_copy</span>
-                  <a class="text-lg md:text-xl pl-1">copy</a>
+                  <p class="text-lg md:text-xl pl-1">copy</p>
                 </div>
               </li>
               <li class="cursor-pointer mr-7">

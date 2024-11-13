@@ -7,6 +7,7 @@ export default defineConfig({
     build: {
         outDir: "docs",
         chunkSizeWarningLimit: 550,
+        sourcemap: true,
         minify: "terser",
         terserOptions: {
             compress: {
