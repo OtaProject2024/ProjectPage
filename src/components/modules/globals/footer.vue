@@ -1,7 +1,7 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted} from "vue";
 import {useRoute} from "vue-router";
-import {event} from 'vue-gtag'
+import {event} from "vue-gtag";
 
 // Footer display control
 const route = useRoute();
@@ -40,7 +40,7 @@ const facebookUrl = ref(`https://www.facebook.com/share.php?u=${baseUrl}`);
 const copy = async () => {
   try {
     await navigator.clipboard.writeText(baseUrl);
-    event("clicked share btn");
+    event("click share");
   } catch (error) {
     const noticeElement = document.getElementById("notice");
     if (noticeElement) {
@@ -56,7 +56,7 @@ const copy = async () => {
 
 // Gtag's Custom Events
 const sharePush = () => {
-  event("clicked share btn")
+  event("click share")
 }
 </script>
 

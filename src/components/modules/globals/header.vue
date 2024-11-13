@@ -1,6 +1,7 @@
 <script setup>
 import {computed, ref} from "vue";
 import {useRoute} from 'vue-router';
+import {event} from "vue-gtag";
 
 // Monitor current path
 const route = useRoute();
@@ -12,6 +13,11 @@ const menuOpen = ref(false);
 const toggle = () => {
   menuOpen.value = !menuOpen.value;
 };
+
+// Gtag's Custom Events
+const movePush = () => {
+  event("move Fishing Guide")
+}
 </script>
 
 <template>
@@ -48,7 +54,7 @@ const toggle = () => {
           </li>
           <li class="animate-nav-in5 w-min whitespace-nowrap pr-5">
             <a href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide" target="_blank" rel="noreferrer"
-               class="group transition">
+               class="group transition" @click="movePush">
               Fishing Guide<span class="mov-li"></span>
             </a>
           </li>
@@ -140,7 +146,7 @@ const toggle = () => {
           <li class="animate-nav-in5 w-min whitespace-nowrap">
             <a href="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide" target="_blank" rel="noreferrer"
                class="group transition" @click="toggle">
-              <div class="flex items-end pr-1">
+              <div class="flex items-end pr-1" @click="movePush">
                 <span class="material-icons text-xl md:text-2xl pr-2">school</span>Fishing Guide
               </div>
               <span class="mov-li"></span>
