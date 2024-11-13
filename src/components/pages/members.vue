@@ -3,16 +3,16 @@ import {ref, onMounted, onUnmounted, computed} from 'vue';
 import profile from "../modules/members/profile.vue";
 
 const profiles = [
-  {name: "池マル", course: "PC program", roles: ["リーダー", "3Dモデリング"], path: "assets/icons/ike.jpg"},
-  {name: "りょ", course: "NS program", roles: ["サブリーダー", "プログラミング"], path: "assets/icons/ry.jpg"},
-  {name: "ピンキー", course: "IB program", roles: ["マネージャー", "デザイン"], path: "assets/icons/pin.jpg"},
-  {name: "メロンパン星人", course: "PC program", roles: ["3Dモデリング", "電子回路設計"], path: "assets/icons/kake.jpg"},
-  {name: "虫", course: "DS program", roles: ["3Dモデリング", "動画制作"], path: "assets/icons/huku.jpg"},
-  {name: "まひ", course: "PC program", roles: ["3Dモデリング", "デザイン"], path: "assets/icons/mahi.jpg"},
-  {name: "はぎ", course: "PC program", roles: ["3Dモデリング", "プログラミング"], path: "assets/icons/hagi.jpg"},
-  {name: "ぷぅさん", course: "PC program", roles: ["3Dモデリング", "プログラミング"], path: "assets/icons/kuma.jpg"},
-  {name: "시준", course: "NS program", roles: ["プログラミング", "広報・連絡"], path: "assets/icons/ki.jpg"},
-  {name: "太田 隆博", course: "担当教員", roles: ["パクチーがキライです"], path: "assets/icons/ota.jpg"}
+  {name: "池マル", course: "PC program", roles: ["リーダー", "3Dモデリング"], path: "assets/icons/ike.webp"},
+  {name: "りょ", course: "NS program", roles: ["サブリーダー", "プログラミング"], path: "assets/icons/ry.webp"},
+  {name: "ピンキー", course: "IB program", roles: ["マネージャー", "デザイン"], path: "assets/icons/pin.webp"},
+  {name: "メロンパン星人", course: "PC program", roles: ["3Dモデリング", "電子回路設計"], path: "assets/icons/kake.webp"},
+  {name: "虫", course: "DS program", roles: ["3Dモデリング", "動画制作"], path: "assets/icons/huku.webp"},
+  {name: "まひ", course: "PC program", roles: ["3Dモデリング", "デザイン"], path: "assets/icons/mahi.webp"},
+  {name: "はぎ", course: "PC program", roles: ["3Dモデリング", "プログラミング"], path: "assets/icons/hagi.webp"},
+  {name: "ぷぅさん", course: "PC program", roles: ["3Dモデリング", "プログラミング"], path: "assets/icons/kuma.webp"},
+  {name: "시준", course: "NS program", roles: ["プログラミング", "広報・連絡"], path: "assets/icons/ki.webp"},
+  {name: "太田 隆博", course: "担当教員", roles: ["パクチーがキライです"], path: "assets/icons/ota.webp"}
 ];
 
 // Profile filter

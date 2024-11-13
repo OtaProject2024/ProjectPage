@@ -50,7 +50,7 @@ glbLoader.load(props.path, (m) => {
 const ambientLight = new THREE.AmbientLight(0x404040);
 const hemisphereLight = new THREE.HemisphereLight(0x404040);
 const directLight = new THREE.DirectionalLight(0xffffff, 5);
-directLight.position.set(5, 0, 2);
+directLight.position.set(5, 5, 5);
 [ambientLight, hemisphereLight, directLight,].forEach(light => scene.add(light));
 
 let renderer, camera
