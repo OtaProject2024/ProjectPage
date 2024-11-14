@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed, onMounted, onUnmounted} from "vue";
+import {ref, computed, onMounted, onUnmounted, watch} from "vue";
 import {useRoute} from "vue-router";
 import {event} from "vue-gtag";
 
@@ -20,6 +20,7 @@ const footerRef = ref(null);
 const closeToggle = (event) => {
   if (footerRef.value && !footerRef.value.contains(event.target)) {
     flg.value = false;
+    text.value = "share";
   }
 };
 
@@ -42,8 +43,10 @@ const copy = async () => {
     await navigator.clipboard.writeText(baseUrl);
     event("click share");
   } catch (error) {
+    const iconElement = document.getElementById("icon");
     const noticeElement = document.getElementById("notice");
-    if (noticeElement) {
+    if (noticeElement && iconElement) {
+      iconElement.innerHTML = "error";
       noticeElement.innerHTML = "Copy failed.<br/>Your device is not supported.";
     }
   } finally {
@@ -54,10 +57,32 @@ const copy = async () => {
   }
 };
 
-// Gtag's Custom Events
-const sharePush = () => {
-  event("click share")
+// Sandbox display control
+const flgInfo = ref(false);
+const showSandbox = computed(() => route.meta.title === "OtaProject2024 | Sandbox");
+
+function showInfo() {
+  setTimeout(() => {
+    flgInfo.value = true;
+    setTimeout(() => {
+      flgInfo.value = false;
+    }, 5000);
+  }, 1000);
 }
+
+onMounted(() => {
+  if (route.matched.some(record => record.path === "/sandbox/:id")) showInfo();
+});
+
+watch(
+    () => route.path,
+    (newPath) => {
+      if (route.matched.some(record => record.path === "/sandbox/:id")) showInfo();
+    }
+);
+
+// Gtag's Custom Events
+const sharePush = () => event("click share");
 </script>
 
 <template>
@@ -77,11 +102,14 @@ const sharePush = () => {
             leave-active-class="transition duration-700"
         >
           <div v-show="flgCopy" class="self-end rounded-lg bg-zinc-900 bg-opacity-80 p-5 mb-3 mr-5 md:mb-5 md:mr-10">
-            <p id="notice" class="text-lg md:text-xl">Copy completed.</p>
+            <p class="flex flex-row items-center text-lg md:text-xl">
+              <span id="icon" class="material-icons text-2xl md:text-3xl">notifications_active</span>
+              <span id="notice" class="pl-4">Copy completed.</span>
+            </p>
           </div>
         </transition>
 
-        <div class="self-end rounded-lg bg-zinc-900 bg-opacity-80 mb-7 p-5 mr-5 md:mr-10">
+        <div v-show="!showSandbox" class="self-end rounded-lg bg-zinc-900 bg-opacity-80 mb-7 p-5 mr-5 md:mr-10">
           <div class="flex flex-row justify-start">
             <p class="cursor-pointer text-lg md:text-xl" @click="toggle">
               <span class="inline-block duration-500"
@@ -113,6 +141,34 @@ const sharePush = () => {
             <a href="https://github.com/OtaProject2024/OtaProject2024_projectpage" target="_blank" rel="noreferrer">OtaProject2024.&nbsp;</a>
             All Rights Reserved.
           </p>
+        </div>
+      </div>
+
+      <div v-show="showSandbox" class="flex flex-col justify-end">
+        <transition
+            enter-from-class="translate-x-full opacity-0"
+            enter-active-class="transition duration-700"
+            leave-to-class="translate-x-full opacity-0"
+            leave-active-class="transition duration-700"
+        >
+          <div v-show="flgInfo" class="self-end rounded-lg bg-zinc-900 bg-opacity-80 p-5 mb-3 mr-5 md:mb-5 md:mr-10">
+            <p class="flex items-center font-Default font-light text-white text-base md:text-lg">
+              <span class="material-icons text-2xl md:text-3xl pr-2">campaign</span>
+              視点操作ができます
+            </p>
+          </div>
+        </transition>
+
+        <div class="self-end rounded-lg bg-zinc-900 bg-opacity-80 w-min mb-7 p-5 mr-5 md:mr-10">
+          <div class="flex flex-row justify-start">
+            <div class="group whitespace-nowrap font-Default font-light text-white text-lg md:text-xl">
+              <router-link to="/Contents">
+                <p class="inline-block w-min">RETURN </p>
+                <p class="inline-block w-min duration-500 ml-2 group-hover:ml-3">&gt;</p>
+                <p class="inline-block w-min duration-500 opacity-0 group-hover:opacity-100">&gt;</p>
+              </router-link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

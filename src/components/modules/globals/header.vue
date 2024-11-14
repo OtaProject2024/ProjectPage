@@ -10,14 +10,10 @@ const showHeaderH1 = computed(() => route.meta.title !== "OtaProject2024 | Home"
 
 // Hamburger menu control
 const menuOpen = ref(false);
-const toggle = () => {
-  menuOpen.value = !menuOpen.value;
-};
+const toggle = () => menuOpen.value = !menuOpen.value;
 
 // Gtag's Custom Events
-const movePush = () => {
-  event("move Fishing Guide")
-}
+const movePush = () => event("move Fishing Guide");
 </script>
 
 <template>

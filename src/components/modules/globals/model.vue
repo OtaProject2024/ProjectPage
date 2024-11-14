@@ -88,23 +88,29 @@ onMounted(() => {
 
   onUnmounted(() => {
     window.removeEventListener("resize", onResize);
-    if (renderer) renderer.dispose();
+    if (renderer) {
+      renderer.dispose();
+      renderer.forceContextLoss();
+    }
     if (scene) {
       scene.traverse((object) => {
+        if (object.texture) object.texture.dispose();
         if (object.geometry) object.geometry.dispose();
         if (object.material) object.material.dispose();
       });
     }
+    if (dracoLoader) dracoLoader.dispose();
   });
 });
 </script>
 
 <template>
   <div ref="frameRef"
-       class="flex justify-center w-full h-[150px] sm:h-[200px] md:h-[250px] rounded-lg bg-zinc-800 bg-opacity-80 my-5"
+       class="flex justify-center w-full h-[150px] sm:h-[200px] md:h-[250px] rounded-lg bg-zinc-800 bg-opacity-80 mt-5"
        id="frame">
     <canvas ref="canvasRef"
             class="w-[300px] sm:w-[400px] md:w-[500px] h-full"
-            id="model"></canvas>
+            id="model">
+    </canvas>
   </div>
 </template>

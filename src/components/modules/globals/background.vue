@@ -77,25 +77,17 @@ function updateCamera() {
   camera.rotation.z -= 0.001;
   if (flgR) {
     camera.rotation.x += 0.0001;
-    if (camera.rotation.x > 0.5) {
-      flgR = false;
-    }
+    if (camera.rotation.x > 0.5) flgR = false;
   } else {
     camera.rotation.x -= 0.0001;
-    if (camera.rotation.x < -0.5) {
-      flgR = true;
-    }
+    if (camera.rotation.x < -0.5) flgR = true;
   }
   if (flgP) {
     camera.position.z += 0.001;
-    if (camera.position.z > 7) {
-      flgP = false;
-    }
+    if (camera.position.z > 7) flgP = false;
   } else {
     camera.position.z -= 0.001;
-    if (camera.position.z < 2) {
-      flgP = true;
-    }
+    if (camera.position.z < 2) flgP = true;
   }
 }
 
@@ -105,12 +97,8 @@ function particlesAnimate() {
     particular.position.x += 0.01;
     particular.position.y += 0.01;
 
-    if (particular.position.x > 32) {
-      particular.position.x = (Math.random() - 0.5) * 128
-    }
-    if (particular.position.y > 32) {
-      particular.position.y = (Math.random() - 0.5) * 128
-    }
+    if (particular.position.x > 32) particular.position.x = (Math.random() - 0.5) * 128
+    if (particular.position.y > 32) particular.position.y = (Math.random() - 0.5) * 128
   });
 }
 

@@ -2,9 +2,7 @@
 import {event} from "vue-gtag";
 
 // Gtag's Custom Events
-const videoPush = () => {
-  event("play Video")
-}
+const videoPush = () => event("play Video");
 </script>
 
 <template>

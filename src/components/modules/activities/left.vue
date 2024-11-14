@@ -9,9 +9,7 @@ const props = defineProps({
 
 // expansion control
 const flg = ref(false);
-const click = () => {
-  flg.value = !flg.value;
-};
+const click = () => flg.value = !flg.value;
 </script>
 
 <template>
