@@ -52,7 +52,7 @@ const togglePageRight = () => {
         <h1 class="font-bold text-center text-6xl md:text-7xl">Contents</h1>
       </div>
       <div class="flex flex-col items-center w-3/4 md:w-2/5 mt-10 mb-60">
-        <div class="flex justify-between items-center text-xl w-full text-zinc-200">
+        <div class="flex justify-between items-center text-xl w-full">
           <div class="transition-opacity duration-500 ease-in-out cursor-pointer group"
                :class="{'opacity-20': activePage === 'Robot'}"
                @click="togglePageLeft">
@@ -70,11 +70,12 @@ const togglePageRight = () => {
         </div>
 
         <div v-show="activePage === 'Robot'" class="flex flex-col items-center">
-          <div class="animate-part-in mb-14">
+          <div class="animate-part-in mb-10">
             <h2 class="font-medium text-center text-4xl md:text-5xl mb-4">Robot</h2>
-            <p>
-              釣り体験用ロボットは、クラウドベースの3D設計ソフトウェア「Autodesk
-              Fusion」を用いた3Dモデリングと、「Python」プログラムによるモーター制御により実現されています。
+            <p class="text-gray-300">
+              釣り体験用ロボットは、
+              クラウドベースの3D設計ソフトウェア「Autodesk Fusion」を用いた3Dモデリングと、
+              インタープリタ型の高水準汎用プログラミング言語「Python」による制御により実現されています。
             </p>
           </div>
           <part title="3D model"/>
@@ -83,9 +84,9 @@ const togglePageRight = () => {
           <program/>
         </div>
         <div v-show="activePage === 'Media'" class="flex flex-col items-center">
-          <div class="animate-part-in mb-14">
+          <div class="animate-part-in mb-10">
             <h2 class="font-medium text-center text-4xl md:text-5xl mb-4">Media</h2>
-            <p>
+            <p class="text-gray-300">
               私たちは、釣りをこれから始める方々向けのサイトをはじめ、プロジェクトの活動が広く伝わるようにWEB開発や動画制作にも力を入れてきました。
             </p>
           </div>
@@ -97,7 +98,7 @@ const togglePageRight = () => {
           <vi/>
         </div>
 
-        <div class="flex justify-between items-center text-xl w-full text-zinc-200">
+        <div class="flex justify-between items-center text-xl w-full">
           <div class="transition-opacity duration-500 ease-in-out cursor-pointer group"
                :class="{'opacity-20': activePage === 'Robot'}"
                @click="togglePageLeft">

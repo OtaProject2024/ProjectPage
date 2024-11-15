@@ -6,7 +6,7 @@ const videoPush = () => event("play Video");
 </script>
 
 <template>
-  <div class="animate-part-in text-gray-200 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
+  <div class="animate-part-in text-gray-300 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
     <p>
       coming soon...
     </p>

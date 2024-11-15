@@ -39,7 +39,7 @@ const click = () => flg.value = !flg.value;
 
     <div class="animate-month-right-in col-start-6 col-end-10 mb-24 mr-auto">
       <div class="flex flex-col items-start">
-        <ul class="list-disc list-inside font-light text-gray-300 text-l md:text-lg pl-1 md:pl-2 mt-3">
+        <ul class="list-disc list-inside font-light text-gray-200 text-l md:text-lg pl-1 md:pl-2 mt-3">
           <li v-for="content in contents">{{ content }}</li>
         </ul>
         <transition

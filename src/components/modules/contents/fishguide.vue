@@ -3,13 +3,18 @@ import card from "../globals/card.vue";
 </script>
 
 <template>
-  <div class="animate-part-in text-gray-200 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
+  <div class="animate-part-in text-gray-300 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
     <p>
-      釣りに興味があるけれど、どんな道具が必要なのか、服装はどうするのか、何から始めたらいいのか分からない方のためのガイドサイトです。
+      釣りに興味があるけれど、どんな道具が必要なのか、服装はどうするのか、
+      <span class="font-semibold text-gray-100">何から始めたらいいのか分からない方のため</span>
+      のガイドサイトです。
       釣り初心者が安心して楽しめるよう、釣具や服装の選び方、基本的な釣りの手法を丁寧に紹介しています。
       また、釣りには自然を守るためのルールや他の人への配慮が不可欠です。
       初めての方でも安心して釣りに出かけられるよう、ルールやマナーについても分かりやすくまとめています。
-      自然と一体となる時間を楽しみながら、初めての釣りの一歩を踏み出してみましょう。
+    </p>
+    <p>
+      自然と一体となる時間を楽しみながら、
+      <span class="font-semibold text-gray-100">初めての釣りの一歩を踏み出してみましょう。</span>
     </p>
     <card site="OtaProject2024 website" title="Fishing Guide - How to starting fishing"
           text="For all beginning fishermen."

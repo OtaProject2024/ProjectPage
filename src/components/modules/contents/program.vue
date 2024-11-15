@@ -3,10 +3,12 @@ import card from "../globals/card.vue";
 </script>
 
 <template>
-  <div class="animate-part-in text-gray-200 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
+  <div class="animate-part-in text-gray-300 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
     <p>
       開発プロセスを効率化するためにGitHubを活用し、ソースコードの開発を行いました。
-      GitHubを使用することで、バージョン管理や問題追跡などが容易に行えます。
+      GitHubを使用することで、
+      <span class="font-semibold text-gray-100">バージョン管理や問題追跡などが容易</span>
+      に行えます。
       進行状況やコードの変更履歴を透明にし、より効果的な開発プロセスを実現しています。
     </p>
     <card site="GitHub" title="OtaProject2024 / PyDoch"
@@ -15,7 +17,9 @@ import card from "../globals/card.vue";
     <p>
       PyDochリポジトリは、ロボットを制御するためのPythonスクリプト群です。 PyYAMLを使用した柔軟な設定管理、RPi.GPIOによるRaspberry
       PiのGPIOピン制御、adafruit_bno055を活用したセンサーデータの取得、そしてPyGameによる音声制御を実現しています。
-      さらに、マルチスレッディングを駆使して、リアルタイムの応答性を損なわずに効率的な処理を可能にしている点が特徴です。
+      さらに、
+      <span class="font-semibold text-gray-100">マルチスレッディングを駆使</span>
+      してリアルタイムの応答性を損なわずに効率的な処理を可能にしている点が特徴です。
     </p>
   </div>
 </template>
