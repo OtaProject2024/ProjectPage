@@ -59,7 +59,7 @@ import model from "../globals/model.vue";
       安全性と使いやすさを追求した設計で、釣りの楽しさを身近に感じていただけます。
       鳳祭でも多くのお子様に体験していただきました。
     </p>
-    <model path="./assets/models/m2_draco.glb" :scale="24.55"></model>
+    <model path="./assets/models/m2_draco.glb" :scale="25.55"></model>
     <div class="self-end group whitespace-nowrap font-light text-white text-sm mt-2 mb-5">
       <router-link to="/sandbox/2">
         <p class="inline-block w-min">SEE MORE</p>
@@ -91,7 +91,7 @@ import model from "../globals/model.vue";
       大型魚を釣り上げる
       <span class="whitespace-nowrap">興奮と感動を！</span>
     </p>
-    <model path="./assets/models/m3_draco.glb" :scale="0.0175" :positionY="-1.25" :rotation="true"></model>
+    <model path="./assets/models/m3_draco.glb" :scale="0.155" :rotation="true"></model>
     <div class="self-end group whitespace-nowrap font-light text-white text-sm mt-2 mb-5">
       <router-link to="/sandbox/3">
         <p class="inline-block w-min">SEE MORE</p>
