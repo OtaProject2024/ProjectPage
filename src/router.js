@@ -52,16 +52,11 @@ const routes = [
         component: () => import("./components/pages/notFound.vue"),
         meta: {title: BASE_TITLE + "404 not found"},
     },
-    {
-        path: "/:pathMatch(.*)",
-        component: () => import("./components/pages/notFound.vue"),
-        meta: {title: BASE_TITLE + "404 not found"},
-    },
 ];
 
 const router = new createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
 });
 
 const DEFAULT_TITLE = "OtaProject2024";

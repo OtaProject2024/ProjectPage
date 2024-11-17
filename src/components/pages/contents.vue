@@ -75,7 +75,7 @@ const togglePageRight = () => {
             <p class="text-gray-300">
               釣り体験用ロボットは、
               クラウドベースの3D設計ソフトウェア「Autodesk Fusion」を用いた3Dモデリングと、
-              インタープリタ型の高水準汎用プログラミング言語「Python」による制御により実現されています。
+              インタープリタ型の高水準汎用プログラミング言語「Python」による制御で実現されています。
             </p>
           </div>
           <part title="3D model"/>
@@ -87,7 +87,8 @@ const togglePageRight = () => {
           <div class="animate-part-in mb-10">
             <h2 class="font-medium text-center text-4xl md:text-5xl mb-4">Media</h2>
             <p class="text-gray-300">
-              私たちは、釣りをこれから始める方々向けのサイトをはじめ、プロジェクトの活動が広く伝わるようにWEB開発や動画制作にも力を入れてきました。
+              私たちは、釣りをこれから始める方向けのサイトをはじめ、
+              プロジェクトの活動が広く伝わるようにWEB開発や動画制作にも力を入れてきました。
             </p>
           </div>
           <part title="Fishing Guide"/>
