@@ -23,7 +23,7 @@ const models = [
   {
     id: 3,
     path: "./assets/models/m3_draco.glb",
-    scale: 0.155,
+    scale: 0.175,
     positionY: 0,
   }
 ]

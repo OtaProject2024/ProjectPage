@@ -91,7 +91,7 @@ import model from "../globals/model.vue";
       大型魚を釣り上げる
       <span class="whitespace-nowrap">興奮と感動を！</span>
     </p>
-    <model path="./assets/models/m3_draco.glb" :scale="0.155" :rotation="true"></model>
+    <model path="./assets/models/m3_draco.glb" :scale="0.175" :rotation="true"></model>
     <div class="self-end group whitespace-nowrap font-light text-white text-sm mt-2 mb-5">
       <router-link to="/sandbox/3">
         <p class="inline-block w-min">SEE MORE</p>
