@@ -10,6 +10,7 @@ const videoPush = () => event("play Video");
     <p>
       coming soon...
     </p>
-    <video class="w-full rounded-lg my-5" controls src="/assets/videos/coming_soon.webm" @click="videoPush"></video>
+    <video class="w-full rounded-lg my-5"
+           controls controlsList="nodownload" src="/assets/videos/coming_soon.webm" @click="videoPush"></video>
   </div>
 </template>

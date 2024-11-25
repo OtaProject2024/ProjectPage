@@ -2,6 +2,8 @@
 import top from "./components/modules/globals/header.vue";
 import fot from "./components/modules/globals/footer.vue";
 import bg from "./components/modules/globals/background.vue";
+
+console.log("Copyright © 2024 OtaProject2024 All rights reserved.");
 </script>
 
 <template>

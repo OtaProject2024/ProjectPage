@@ -123,7 +123,15 @@ import model from "../globals/model.vue";
       してマグネットセンサーを反応させ、Arduinoによって振動モータを動かします。
     </p>
     <div class="flex justify-center rounded-lg my-5">
-      <img class="rounded-lg w-10/12" src="/assets/images/contents/rod.webp" alt="">
+      <img class="rounded-lg w-10/12" src="/assets/images/contents/rod.webp" alt="rod">
+    </div>
+    <model path="./assets/models/m4_draco.glb" :scale="0.275" :rotation="true"></model>
+    <div class="self-end group whitespace-nowrap font-light text-white text-sm mt-2 mb-5">
+      <router-link to="/sandbox/4">
+        <p class="inline-block w-min">SEE MORE</p>
+        <p class="inline-block w-min duration-500 ml-2 group-hover:ml-3">&gt;</p>
+        <p class="inline-block w-min duration-500 opacity-0 group-hover:opacity-100">&gt;</p>
+      </router-link>
     </div>
   </div>
 </template>

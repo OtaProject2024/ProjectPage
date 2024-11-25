@@ -25,11 +25,17 @@ const models = [
     path: "./assets/models/m3_draco.glb",
     scale: 0.175,
     positionY: 0,
+  },
+  {
+    id: 4,
+    path: "./assets/models/m4_draco.glb",
+    scale: 0.275,
+    positionY: 0,
   }
 ]
 
 let id = Number(route.params.id);
-const validIds = [1, 2, 3];
+const validIds = [1, 2, 3, 4];
 if (!validIds.includes(id)) id = 1;
 const selectModel = models.find(model => model.id === id);
 
@@ -49,7 +55,7 @@ glbLoader.load(selectModel.path, (m) => {
   const model = m.scene;
   model.position.set(0, selectModel.positionY, 0);
   model.scale.set(selectModel.scale, selectModel.scale, selectModel.scale);
-  model.rotation.y = selectModel.id === 3 ? Math.PI / 2 : -Math.PI / 2;
+  model.rotation.y = selectModel.id === 3 || selectModel.id === 4 ? Math.PI / 2 : -Math.PI / 2;
   scene.add(model);
 
   // Animate

@@ -38,7 +38,7 @@ const routes = [
         component: () => import("./components/pages/sandbox.vue"),
         beforeEnter: (to, from, next) => {
             const id = Number(to.params.id);
-            if (id === 1 || id === 2 || id === 3) {
+            if (id === 1 || id === 2 || id === 3 || id === 4) {
                 next()
             } else {
                 next({name: "NotFound"})
