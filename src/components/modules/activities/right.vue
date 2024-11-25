@@ -30,7 +30,7 @@ const click = () => flg.value = !flg.value;
     </div>
   </div>
 
-  <div class="flex md:contents" @click="click">
+  <div class="flex md:contents">
     <div class="animate-vertical-in relative col-start-5 col-end-6 mr-10 md:mx-auto">
       <div class="h-full w-4 flex items-center justify-center">
         <div class="h-full w-0.5 bg-white pointer-events-none"></div>

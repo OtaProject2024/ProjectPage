@@ -30,7 +30,7 @@ const click = () => flg.value = !flg.value;
     </div>
   </div>
 
-  <div class="flex flex-row-reverse md:contents" @click="click">
+  <div class="flex flex-row-reverse md:contents">
     <div class="animate-month-left-in col-start-1 col-end-5 mb-24 mr-auto md:mr-0 md:ml-auto">
       <div class="flex flex-col items-start md:items-end">
         <ul class="list-disc list-inside font-light text-gray-200 text-l md:text-lg pl-1 md:pl-2 mt-3">

@@ -3,25 +3,25 @@ import left from "../modules/activities/left.vue";
 import right from "../modules/activities/right.vue";
 
 const mar = ["顔合わせ", "釣りの体験会"];
-const mar_images = ["assets/images/mar2024_001.webp", "assets/images/mar2024_002.webp"];
+const mar_images = ["assets/images/activities/mar2024_001.webp", "assets/images/activities/mar2024_002.webp"];
 const apr = ["ルール決定", "テーマ決定", "役割分担", "制作物の概要決定"];
-const apr_images = ["assets/images/apr2024_001.webp", "assets/images/apr2024_002.webp"];
+const apr_images = ["assets/images/activities/apr2024_001.webp", "assets/images/activities/apr2024_002.webp"];
 const may = ["設計開始", "CADデータ作成", "アンケート実施", "3Dプリント"];
-const may_images = ["assets/images/may2024_001.webp", "assets/images/may2024_002.webp"];
+const may_images = ["assets/images/activities/may2024_001.webp", "assets/images/activities/may2024_002.webp"];
 const jun = ["データ修正", "ロボット組み立て", "テスト実施"];
-const jun_images = ["assets/images/jun2024_001.webp", "assets/images/jun2024_002.webp"];
+const jun_images = ["assets/images/activities/jun2024_001.webp", "assets/images/activities/jun2024_002.webp"];
 const jul = ["プロトタイプ完成", "中間発表", "プロトタイプ改良"];
-const jul_images = ["assets/images/jul2024_001.webp", "assets/images/jul2024_002.webp"];
+const jul_images = ["assets/images/activities/jul2024_001.webp", "assets/images/activities/jul2024_002.webp"];
 const aug = ["修正版プロトタイプ制作", "WEBページ制作", "リーフレット制作"];
-const aug_images = ["assets/images/aug2024_001.webp", "assets/images/aug2024_002.webp"];
+const aug_images = ["assets/images/activities/aug2024_001.webp", "assets/images/activities/aug2024_002.webp"];
 const sep = ["修正版プロトタイプ完成", "WEBページ完成", "リーフレット完成", "鳳祭出店準備"];
-const sep_images = ["assets/images/sep2024_001.webp", "assets/images/sep2024_002.webp"];
+const sep_images = ["assets/images/activities/sep2024_001.webp", "assets/images/activities/sep2024_002.webp"];
 const oct = ["空間デザイン", "映像制作", "鳳祭出店準備"];
-const oct_images = ["assets/images/oct2024_001.webp", "assets/images/oct2024_002.webp"];
+const oct_images = ["assets/images/activities/oct2024_001.webp", "assets/images/activities/oct2024_002.webp"];
 const nov = ["鳳祭出店", "反省会", "最終発表準備"];
-const nov_images = ["assets/images/nov2024_001.webp", "assets/images/nov2024_002.webp"];
+const nov_images = ["assets/images/activities/nov2024_001.webp", "assets/images/activities/nov2024_002.webp"];
 const dec = ["最終発表会", "成果報告書作成"];
-const dec_images = ["assets/images/dec2024_001.webp"];
+const dec_images = ["assets/images/activities/dec2024_001.webp"];
 </script>
 
 <template>

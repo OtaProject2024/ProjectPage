@@ -99,5 +99,31 @@ import model from "../globals/model.vue";
         <p class="inline-block w-min duration-500 opacity-0 group-hover:opacity-100">&gt;</p>
       </router-link>
     </div>
+
+    <h3 class="font-bold text-gray-100 text-xl md:text-2xl text-center  mt-10 mb-4">
+      マグネットセンサーとArduinoで動く
+      <span class="whitespace-nowrap">釣り竿</span>
+    </h3>
+    <p>
+      魚の重みで
+      <span class="font-semibold text-gray-100">マグネットセンサーが反応</span>
+      し、モーターが振動することで、魚の引きを再現している竿です。
+    </p>
+    <h4 class="text-lg md:text-xl mt-4 mb-1">特徴</h4>
+    <ul class="list-disc leading-relaxed font-semibold text-gray-200 text-start mb-4">
+      <li>マイコンはArduino</li>
+      <li>マグネットセンサーによって振動モーターを動かす</li>
+      <li>餌の部分と魚の口の部分に磁石がある</li>
+    </ul>
+    <p class="text-start">
+      餌の部分と魚の口の部分に
+      <span class="font-semibold text-gray-100">磁石を搭載</span>
+      し、くっついたときに引っ張られる
+      <span class="font-semibold text-gray-100">重みを利用</span>
+      してマグネットセンサーを反応させ、Arduinoによって振動モータを動かします。
+    </p>
+    <div class="flex justify-center rounded-lg my-5">
+      <img class="rounded-lg w-10/12" src="/assets/images/contents/rod.webp" alt="">
+    </div>
   </div>
 </template>
