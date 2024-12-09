@@ -4,6 +4,10 @@
 # modules
 node_modules
 
+# Build files
+dist/
+docs/
+
 # jetbrains
 .idea/
 
