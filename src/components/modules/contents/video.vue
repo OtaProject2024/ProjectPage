@@ -11,6 +11,6 @@ const videoPush = () => event("play Video");
       coming soon...
     </p>
     <video class="w-full rounded-lg my-5"
-           controls controlsList="nodownload" src="/assets/videos/coming_soon.webm" @click="videoPush"></video>
+           controls controlsList="nodownload" src="#" @click="videoPush"></video>
   </div>
 </template>
