@@ -31,15 +31,9 @@ jobs:
         run: |
           PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
           CURRENT_TAG=$(git describe --tags)
-          echo "# ${{ github.repository }} ($CURRENT_TAG)\n" > changelog.md
-          echo "## Changelog\n" >> changelog.md
           if [ -z "$PREVIOUS_TAG" ]; then
-            git log --pretty=format:"- %s (%h)" --reverse >> changelog.md
-            echo "" >> changelog.md
             echo "**Full Changelog**: https://github.com/${{ github.repository }}/commits/${CURRENT_TAG}" >> changelog.md
           else
-            git log --pretty=format:"- %s (%h)" $PREVIOUS_TAG..HEAD >> changelog.md
-            echo "" >> changelog.md
             echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/${PREVIOUS_TAG}...${CURRENT_TAG}" >> changelog.md
           fi
         shell: bash
