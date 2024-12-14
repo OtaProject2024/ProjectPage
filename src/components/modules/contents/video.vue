@@ -14,6 +14,6 @@ const videoPush = () => event("play Video");
       <span class="font-semibold text-gray-100">音声が出ますので、音量にご注意ください。</span>
     </p>
     <video class="w-full rounded-lg my-5"
-           controls controlsList="nodownload" src="/assets/video/final.webm" @click="videoPush"></video>
+           controls controlsList="nodownload" src="#" @click="videoPush"></video>
   </div>
 </template>
