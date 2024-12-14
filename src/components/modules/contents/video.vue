@@ -8,9 +8,12 @@ const videoPush = () => event("play Video");
 <template>
   <div class="animate-part-in text-gray-300 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
     <p>
-      coming soon...
+      プロジェクトの活動を紹介する動画です。
+    </p>
+    <p>
+      <span class="font-semibold text-gray-100">音声が出ますので、音量にご注意ください。</span>
     </p>
     <video class="w-full rounded-lg my-5"
-           controls controlsList="nodownload" src="#" @click="videoPush"></video>
+           controls controlsList="nodownload" src="/assets/video/final.webm" @click="videoPush"></video>
   </div>
 </template>
