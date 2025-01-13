@@ -16,7 +16,7 @@ import card from "../globals/card.vue";
       自然と一体となる時間を楽しみながら、
       <span class="font-semibold text-gray-100">初めての釣りの一歩を踏み出してみましょう。</span>
     </p>
-    <card site="OtaProject2024 website" title="Fishing Guide - How to starting fishing"
+    <card site="OtaProject2024 website" title="Fishing Guide - How to Start Fishing"
           text="For all beginning fishermen."
           path="https://project.ne.senshu-u.ac.jp/2024/05/FishingGuide#/"/>
     <p class="mt-5">

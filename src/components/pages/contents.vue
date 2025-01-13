@@ -73,7 +73,7 @@ const togglePageRight = () => {
           <div class="animate-part-in mb-10">
             <h2 class="font-medium text-center text-4xl md:text-5xl mb-4">Robot</h2>
             <p class="text-gray-300">
-              釣り体験用ロボット・釣り竿は、
+              魚ロボット・釣り竿は、
               クラウドベースの3D設計ソフトウェア<span class="whitespace-nowrap">「Autodesk Fusion」</span>を用いた3Dモデリングと、
               汎用プログラミング言語「Python」「C++」による制御で実現されています。
             </p>

@@ -5,12 +5,12 @@ import model from "../globals/model.vue";
 <template>
   <div class="animate-part-in font-Default text-gray-300 w-11/12 flex flex-col items-center p-3 mt-2 mb-12">
     <h3 class="font-bold text-gray-100 text-xl md:text-2xl text-center mb-4">
-      初代大型ロボット
+      初代大型魚ロボット
       <span class="whitespace-nowrap">「マードック」</span>
     </h3>
     <p>
       <span class="font-semibold text-gray-100">水中での自然な動き</span>
-      を目指して一から設計開発した初代大型ロボット。中間発表会でも注目を集めた意欲作です。
+      を目指して一から設計開発した初代大型魚ロボット。中間発表会でも注目を集めた意欲作です。
     </p>
     <h4 class="text-lg md:text-xl mt-4 mb-1">特徴</h4>
     <ul class="list-disc leading-relaxed font-semibold text-gray-200 text-start mb-4">
@@ -36,13 +36,13 @@ import model from "../globals/model.vue";
     </div>
 
     <h3 class="font-bold text-gray-100 text-xl md:text-2xl text-center mt-10 mb-4">
-      小魚型ロボット
+      小型魚ロボット
       <span class="whitespace-nowrap">「小魚くん」</span>
     </h3>
     <p class="text-start">
       お子様の楽しい釣り体験を第一に考えた、
       <span class="font-semibold text-gray-100">軽量コンパクト</span>
-      な釣りロボット！
+      な魚ロボット！
     </p>
     <h4 class="text-lg md:text-xl mt-4 mb-1">特徴</h4>
     <ul class="list-disc leading-relaxed font-semibold text-gray-200 text-start mb-4">
@@ -54,7 +54,7 @@ import model from "../globals/model.vue";
     </ul>
     <p class="text-start">
       小さなお子様でも安心して釣り体験を楽しめるよう、従来の釣り針を使用せず、
-      <span class="font-semibold text-gray-100">磁力でロボットを釣り上げる新しい仕組み</span>
+      <span class="font-semibold text-gray-100">磁力で魚ロボットを釣り上げる新しい仕組み</span>
       を新しく設計。
       安全性と使いやすさを追求した設計で、釣りの楽しさを身近に感じていただけます。
       鳳祭でも多くのお子様に体験していただきました。
@@ -69,11 +69,11 @@ import model from "../globals/model.vue";
     </div>
 
     <h3 class="font-bold text-gray-100 text-xl md:text-2xl text-center mt-10 mb-4">
-      2代目大型ロボット
+      二代目大型魚ロボット
       <span class="whitespace-nowrap">「ぎょぼっと」</span>
     </h3>
     <p class="text-start">
-      初代「マードック」の血統を受け継ぎ、迫力の大きさを誇る新作ロボット。
+      初代「マードック」の血統を受け継ぎ、迫力の大きさを誇る新作魚ロボット。
       前作で課題となっていた
       <span class="font-semibold text-gray-100">エサの摂取機能や操作性を大幅に改善</span>
       し、釣り体験の実現を目指し作成しました。
@@ -101,13 +101,13 @@ import model from "../globals/model.vue";
     </div>
 
     <h3 class="font-bold text-gray-100 text-xl md:text-2xl text-center  mt-10 mb-4">
-      マグネットセンサーとArduinoで動く
-      <span class="whitespace-nowrap">釣り竿</span>
+      魚のあたり再現ロッド
+      <span class="whitespace-nowrap">「ブルブルロッド」</span>
     </h3>
     <p>
-      魚の重みで
+      魚ロボットの重みで
       <span class="font-semibold text-gray-100">マグネットセンサーが反応</span>
-      し、モーターが振動することで、魚の引きを再現している竿です。
+      し、モーターが振動することで、魚の引きを再現している釣り竿です。
     </p>
     <h4 class="text-lg md:text-xl mt-4 mb-1">特徴</h4>
     <ul class="list-disc leading-relaxed font-semibold text-gray-200 text-start mb-4">
