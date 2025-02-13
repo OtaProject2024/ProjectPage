@@ -4,6 +4,7 @@ const props = defineProps({
   title: String,
   text: String,
   path: String,
+  content: Boolean,
 });
 </script>
 
@@ -15,7 +16,8 @@ const props = defineProps({
         <h3 class="font-bold text-white text-xl mb-2">{{ title }}</h3>
         <p class="font-light text-gray-200 text-base">{{ text }}</p>
         <div class="self-end whitespace-nowrap font-light text-white text-sm">
-          <p class="inline-block w-min">READ MORE</p>
+          <p v-show="content" class="inline-block w-min">WATCH</p>
+          <p v-show="!content" class="inline-block w-min">READ MORE</p>
           <p class="inline-block w-min duration-500 ml-2 group-hover:ml-3">&gt;</p>
           <p class="inline-block w-min duration-500 opacity-0 group-hover:opacity-100">&gt;</p>
         </div>
